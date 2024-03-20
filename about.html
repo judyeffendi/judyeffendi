@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <style>
+        /* CSS styles here */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @keyframes neonVibration {
+            0% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+            50% {
+                text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+            }
+            100% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+        }
+
+        .neon-text {
+            animation: neonVibration 2s infinite;
+        }
+    </style>
+</head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50">
+    <nav class="bg-pink-400 p-4">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Logo or Website Name -->
+    
+              
+              <a href="/" class="text-white text-lg font-bold neon-text">Judy Effendi - Software Engineer @Target</a>
+              
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="index.html" class="text-white neon-text">Home</a>
+                <a href="about.html" class="text-white neon-text">About</a>
+                <a href="projects.html" class="text-white neon-text">Projects</a>
+                <a href="experience.html" class="text-white neon-text">Experience</a>
+                <a href="images/JUDYRESUME2024.pdf" class="text-white neon-text">Resume</a>
+                <a href="contact.html" class="text-white neon-text">Contact</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                </a>
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/github.png" alt="GitHub Logo" class="h-5">
+                </a>
+            </div>
+        </div>
+    </nav>
+<style>
+    .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+    
+</style>
+<!-- make each hobby interest link to a page. put an image that you click on to takr to page
+ -->
+    
+    <!-- About Me Page Content -->
+    <div class="container mx-auto mt-8">
+        <!-- About Me Section -->
+        <div id="about" class="mb-8">
+            <h1 class="text-3xl font-bold mb-4">About Me</h1>
+
+            <div class ="grid grid-cols-4 gap-2">
+                <img src="images/gradpic2.jpeg" alt="Welcome Image" class="image">
+                <img src="images/gradpic3.jpeg" alt="Welcome Image" class="image">
+                <img src="images/gradpic8.jpeg" alt="Welcome Image" class="image">
+                <img src="images/gradpic9.jpeg" alt="Welcome Image" class="image">
+
+
+
+
+            </div>
+            <!-- Education Section -->
+            <section class="mb-8">
+            
+
+                <!--  side by side images into a grid -->
+                <h2 class="text-2xl font-bold mb-2">Education</h2>
+    
+
+                <!-- <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Michigan State University  <i>2019-2023</i></h2>
+                    <p class="text-gray-700">Bachelors of Engineering in Computer Science, Minor in Spanish</p>
+                </div> -->
+                <p class="text-gray-700"><b>Michigan State University</b> <i>2019-2023</i>
+                    <br>
+                <p class="text-gray-700">Bachelors of Engineering in Computer Science, Minor in Spanish
+
+            </section>
+
+            <!-- Tech Skills -->
+            <section class="mb-8">
+                <!-- Example Skills Page -->
+            <div class="container mx-auto mt-8">
+                <h1 class="text-3xl font-bold mb-4">My Skills</h1>
+            
+                <div class="grid grid-cols-2 gap-4">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Technical Skills</h2>
+                    <p class="text-gray-700">Python, JavaScript, HTML, C++, SQL, Spark/Scala, Kotlin, Sveltekit, Tailwind</p>
+                </div>
+            
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Devops</h2>
+                    <p class="text-gray-700">Git, Jira, Docker, Google Cloud, Grafana, JUnit, Vela</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Non-Technical Skills</h2>
+                    <p class="text-gray-700">Leadership, Communication, Organization, Teamwork</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Languages</h2>
+                    <p class="text-gray-700">Fluency in Arabic, English, Proficciency, Spanish, French</p>
+                </div>
+            
+            </div>
+            </div>
+  
+            </section>
+
+             <!-- Interest  -->
+             <section class="mb-8">
+                <!-- Example Interest Page -->
+            <div class="container mx-auto mt-8">
+                <h1 class="text-3xl font-bold mb-4">Interest/Hobbies</h1>
+                <!-- edit it so it's a collage and text -->
+            
+                <div class="grid grid-cols-2 gap-4">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Active</h2>
+                    <a href="judy-portfolio/../about" class="bg-white text-pink-400 px-6 py-2 rounded border neon-text">Training Logs!</a>
+                    <p class="text-gray-700">I have a deep passion for staying active and exploring various ways to move my body, whether it's through running, biking, dancing, walking, hiking, skiing, or engaging in any form of physical activity. I find joy in the exhilarating experience of pushing my limits and discovering new ways to keep my body in motion.</p>
+                    <!-- description and add a collage for each -->
+                </div>
+            
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Books/Podcast</h2>
+                    <p class="text-gray-700">I am an avid reader with a diverse taste, delving into everything from self-help and sci-fi to non-fiction. I have a knack for discovering compelling podcasts that I enjoy listening to while working or reading."</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Music</h2>
+                    <p class="text-gray-700">follow me on spotify. I love music from Arabic to hip-hop, afrobeats, hispanic music to rap!</p>
+                </div>
+<!-- make a travel diaries. take to page where it includes photos of travels i have done.  -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Travel</h2>
+                    <p class="text-gray-700">I'm a passionate traveler who delights in exploring diverse cultures and regions. Having grown up with a love for travel since childhood, I've developed a keen interest in learning new languages, often using Duolingo as my go-to resource.</p>
+                </div>
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Cooking</h2>
+                    <p class="text-gray-700">Coming soon...</p>
+                </div>
+            
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Photography</h2>
+                    <p class="text-gray-700">Coming soon...</p>
+                <!-- learning languages, learning new skills  -->
+                </div>
+
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Journaling</h2>
+                    <p class="text-gray-700">Coming soon...</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Beauty</h2>
+                    <p class="text-gray-700">Coming soon...</p>
+                </div>
+                
+            
+            </div>
+            </div>
+  
+            </section>
+
+
+
+            <!-- Add more sections as needed -->
+        </div>
+
+        <!-- Additional Content Goes Here -->
+
+    </div>

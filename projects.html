@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/main.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <style>
+        /* CSS styles here */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .button {
+        margin-top: 10px; /* Adjust the margin to control the vertical spacing */
+        padding: 8px 16px;
+        background-color: #ff66b2; /* Rose Pink */
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block; /* Ensure buttons are displayed as block elements */
+        transition: background-color 0.3s ease; /* Add smooth transition */
+        }
+
+        .button:hover {
+        background-color: #e64d89; /* Slightly darker pink on hover */
+        }
+        @keyframes neonVibration {
+            0% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+            50% {
+                text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+            }
+            100% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+        }
+
+        .neon-text {
+            animation: neonVibration 2s infinite;
+        }
+    </style>
+</head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50">
+    <nav class="bg-pink-400 p-4">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Logo or Website Name -->
+    
+              
+              <a href="/" class="text-white text-lg font-bold neon-text">Judy Effendi - Software Engineer @Target</a>
+              
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="index.html" class="text-white neon-text">Home</a>
+                <a href="about.html" class="text-white neon-text">About</a>
+                <a href="projects.html" class="text-white neon-text">Projects</a>
+                <a href="experience.html" class="text-white neon-text">Experience</a>
+                <a href="images/JUDYRESUME2024.pdf" class="text-white neon-text">Resume</a>
+                <a href="contact.html" class="text-white neon-text">Contact</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                </a>
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/github.png" alt="GitHub Logo" class="h-5">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold mb-4">My Projects</h1>
+      
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h2 class="text-xl font-bold mb-2">CarMake Simulation Tool</h2>
+                <p class="text-gray-700">As apart of my Capstone for my Undergraduate Computer Science Degree, me and a group of likewise student's developed a Web Interface for Car Simulation Tool for Bosch.</p>
+                <a href="http://www.capstone.cse.msu.edu/2023-01/projects/bosch/" target="_blank" rel="noopener noreferrer" class="button">Learn More</a>
+                <a href="http://www.capstone.cse.msu.edu/2023-01/projects/bosch/project-video.mp4" target="_blank" rel="noopener noreferrer" class="button">Watch The Video</a>
+            </div>
+
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h2 class="text-xl font-bold mb-2">Algorithm for Pedestrian Collision Avoidance</h2>
+                <p class="text-gray-700">Responsible for developing a website for my Software Engineering team project. Developed through HTML, CSS, and PHP connection to the server.</p>
+                <a href="https://www.cse.msu.edu/~effendi1/" target="_blank" rel="noopener noreferrer" class="button">Learn More</a>
+                <a href="https://github.com/jeffendi/CSE435PCASTeam1.github.io" target="_blank" rel="noopener noreferrer" class="button">GitHub Repo</a>
+            </div>
+
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h2 class="text-xl font-bold mb-2">Web-Designer for Computer Science Outreach</h2>
+                <p class="text-gray-700">As a Lead Admin for Michigan State University's International and local Computer Science programs, I was responsible for designing/maintaining our websites. Take a look!</p>
+                <a href="https://msu-cse-outreach.github.io/belizeweb/index.html" target="_blank" rel="noopener noreferrer" class="button">MSU x Pathlight Coding Club</a>
+                <a href="https://msu-cse-outreach.github.io/turkeycc/index.html" target="_blank" rel="noopener noreferrer" class="button">MSU x Izmir Sev Coding Club</a>
+                <a href="https://msu-cse-outreach.github.io/spartangwc/index.html" target="_blank" rel="noopener noreferrer" class="button">Girls Who Code</a>
+                <a href="https://msu-cse-outreach.github.io/technovation/" target="_blank" rel="noopener noreferrer" class="button">Technovation</a>
+            </div>
+
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h2 class="text-xl font-bold mb-2">Why Not</h2>
+                <p class="text-gray-700">A space where life's journey is celebrated in all its dimensions!

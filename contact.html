@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <style>
+        /* CSS styles here */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .icon {
+            margin-right: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .button {
+        margin-top: 10px; /* Adjust the margin to control the vertical spacing */
+        padding: 8px 16px;
+        background-color: #ff66b2; /* Rose Pink */
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block; /* Ensure buttons are displayed as block elements */
+        transition: background-color 0.3s ease; /* Add smooth transition */
+        }
+
+        .button:hover {
+        background-color: #e64d89; /* Slightly darker pink on hover */
+        }
+        @keyframes neonVibration {
+            0% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+            50% {
+                text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+            }
+            100% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+        }
+
+        .neon-text {
+            animation: neonVibration 2s infinite;
+        }
+    </style>
+</head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-pink-50">
+    <nav class="bg-pink-400 p-4">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Logo or Website Name -->
+    
+              
+              <a href="/" class="text-white text-lg font-bold neon-text">Judy Effendi - Software Engineer @Target</a>
+              
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="index.html" class="text-white neon-text">Home</a>
+                <a href="about.html" class="text-white neon-text">About</a>
+                <a href="projects.html" class="text-white neon-text">Projects</a>
+                <a href="experience.html" class="text-white neon-text">Experience</a>
+                <a href="images/JUDYRESUME2024.pdf" class="text-white neon-text">Resume</a>
+                <a href="contact.html" class="text-white neon-text">Contact</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                </a>
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/github.png" alt="GitHub Logo" class="h-5">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8">
+        <div class="contact-container">
+            <h1 class="text-3xl font-bold mb-4">Get in Touch</h1>
+
+            <p class="text-gray-700 mb-4">Feel free to reach out to me through various channels. I'd love to hear from you!</p>
+
+            <div class="contact-info">
+                <p class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-pink-500 icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h0a3 3 0 1 1-6 0h0a3 3 0 1 1-6 0v0a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v0a3 3 0 1 1-6 0h0"></path>
+                    </svg>
+                    <a href="mailto:judyeffendi2@gmail.com" class="text-pink-500">Email: judyeffendi2@gmail.com</a>
+                </p>
+
+                <p class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-pink-500 icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4a8 8 0 0 1 8 8c0 4.41-3.59 8-8 8s-8-3.59-8-8 3.59-8 8-8zm0 16v-2m0 0a4 4 0 1 1 0-8v-2a4 4 0 1 1 0 8v2zm0 0a4 4 0 1 0 0-8v-2a4 4 0 1 0 0 8v2z"></path>
+                    </svg>
+                    <a href="tel:+2488409149" class="text-pink-500">Phone: +1 (248) 840-9149</a>
+                </p>
+
+                <p class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-pink-500 icon">
+                        <path stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" d="M14 2.14a15.91 15.91 0 0 1 0 19.72M9 17l-3 3m0 0l-3-3m3 3V10"></path>
+                    </svg>
+                    <a href="https://www.instagram.com/judzthecoder/" target="_blank" rel="noopener noreferrer" class="text-pink-500">Instagram: @judzthecoder</a>
+                </p>
+
+                <p class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-pink-500 icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V5m6 14V5"></path>
+                    </svg>
+                    <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-pink-500">LinkedIn: linkedin.com/in/judy-effendi</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

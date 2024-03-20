@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <style>
+        /* CSS styles here */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .button {
+        margin-top: 10px; /* Adjust the margin to control the vertical spacing */
+        padding: 8px 16px;
+        background-color: #ff66b2; /* Rose Pink */
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block; /* Ensure buttons are displayed as block elements */
+        transition: background-color 0.3s ease; /* Add smooth transition */
+        }
+
+        .button:hover {
+        background-color: #e64d89; /* Slightly darker pink on hover */
+        }
+        @keyframes neonVibration {
+            0% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+            50% {
+                text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+            }
+            100% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+        }
+
+        .neon-text {
+            animation: neonVibration 2s infinite;
+        }
+        .experience-container {
+            padding: 2rem;
+        }
+
+        .experience {
+            margin-bottom: 2rem;
+        }
+
+        .position {
+            font-weight: bold;
+        }
+
+        .location {
+            font-style: italic;
+        }
+
+        .date {
+            font-weight: bold;
+        }
+
+        .responsibility {
+            margin-top: 0.5rem;
+            list-style-type: square;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50">
+    <nav class="bg-pink-400 p-4">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Logo or Website Name -->
+    
+              
+              <a href="/" class="text-white text-lg font-bold neon-text">Judy Effendi - Software Engineer @Target</a>
+              
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="index.html" class="text-white neon-text">Home</a>
+                <a href="about.html" class="text-white neon-text">About</a>
+                <a href="projects.html" class="text-white neon-text">Projects</a>
+                <a href="experience.html" class="text-white neon-text">Experience</a>
+                <a href="images/JUDYRESUME2024.pdf" class="text-white neon-text">Resume</a>
+                <a href="contact.html" class="text-white neon-text">Contact</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                </a>
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/github.png" alt="GitHub Logo" class="h-5">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8">
+        <div class="experience-container">
+            <h1 class="text-3xl font-bold mb-4">Professional Experience</h1>
+
+            <!-- Experience sections will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Define experiences data
+        let experiences = [
+      {
+        company: "Target Corp.",
+        location: "Minneapolis, MN",
+        position: "Software Engineer",
+        date: "September 2023-present",
+        responsibilities: [
+          "Developed a Kotlin based module for Kafka to achieve seamless data mirroring from production to stage, ensuring adherence to Avro schema standards.",
+          "Implemented robust redaction mechanisms to safeguard sensitive data from being propagated to output topics.",
+          "Performed unit testing of endpoints to validate functionality and security measures for authorization mechanisms.",
+          "Maintained and optimized PostgreSQL DB for efficient data storage and retrieval."
+        ]
+      },
+      {
+        company: "Bosch",
+        location: "East Lansing, MI",
+        position: "Software Engineer, Capstone Experience",
+        date: "January 2023-April 2023",
+        responsibilities: [
+          "Developed a Web Interface for HIL (hardware-in-the-loop) Benches to centralize remote access for various teams across Bosch utilizing a Flask API for an instance of a HIL that sends HTTP request to allow control over the CarMaker simulation.",
+          "Increased Bosch’s productivity for their Engineers by over 50% by allowing an easier and straight-forward approach to access CarMaker Simulations for autonomous vehicle testing."
+        ]
+      },
+      {
+        company: "Target Corp.",
+        location: "Remote",
+        position: "Software Engineer Intern",
+        date: "June 2022-August 2022",
+        responsibilities: [
+          "Leveraged the power of Spark/Scala to develop a cutting-edge automated data comparator tool for the Data Engineering Stores Planning team, streamlining data analysis and validation processes.",
+          "Implemented an end-to-end real-life enterprise product utilized by Target-Tech to analyze and deploy local data visualized through Grafana."
+        ]
+      },
+      {
+      company: "College of Engineering, MSU",
+      location: "East Lansing, MI",
+      position: "CSE Outreach Administrator",
+      date: "August 2020-April 2023",
+      responsibilities: [
+        "Exemplified visionary leadership as the lead admin of four esteemed local and international computer science outreach programs.",
+        "Spearheaded curriculum development, session planning, content instruction, parent communication, and program evaluation.",
+        "Successfully introduced the dynamic fields of Python programming and Web Development to a diverse range of students from 6th-12th grade, with an emphasis on empowering underrepresented demographics."
+      ]
+    },
+    {
+      company: "Computer Science Department, College of Engineering, MSU",
+      location: "East Lansing, MI",
+      position: "Undergraduate CSE ULA",
+      date: "January 2022-April 2023",
+      responsibilities: [
+        "Actively guided a class of 30 students in debugging, problem-solving exercises, labs, and projects.",
+        "Enhanced students’ proficiency in Python programming concepts, guiding them through the difficulty of..."
+        // Add more responsibilities as needed
+      ]
+    },
+    {
+      company: "College of Engineering, MSU",
+      location: "East Lansing, MI",
+      position: "Ambassador, Women in Engineering",
+      date: "January 2022-April 2023",
+      responsibilities: [
+        "Led and administrated K-12 outreach activities like ‘Girls’ Stem Day’ and ‘Introduce a Girl to Engineering’ to recruit and encourage girls to pursue careers within the engineering field.",
+        "Encouraged opportunities for academic, personal, and professional growth by organizing, leading, and planning a 6-week Leadership Series for 30+ undergraduate Women in Engineering."
+        // Add more responsibilities as needed
+      ]
+    }
+      // Add more experiences as needed
+    ];
+
+        // Function to create experience sections
+        function createExperienceSections() {
+            const experienceContainer = document.querySelector('.experience-container');
+
+            experiences.forEach(experience => {
+                const experienceDiv = document.createElement('div');
+                experienceDiv.classList.add('experience');
+
+                experienceDiv.innerHTML = `
+                    <p>${experience.company}</p>
+                    <p class="location">${experience.location}</p>
+                    <p class="position">${experience.position}</p>
+                    <p class="date">${experience.date}</p>
+                    <ul>
+                        ${experience.responsibilities.map(responsibility => `<li class="responsibility">${responsibility}</li>`).join('')}
+                    </ul>
+                `;
+
+                experienceContainer.appendChild(experienceDiv);
+            });
+        }
+
+        // Call function to create experience sections
+        createExperienceSections();
+    </script>
+</body>
+</html>

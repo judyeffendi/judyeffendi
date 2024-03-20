@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <style>
+        /* CSS styles here */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @keyframes neonVibration {
+            0% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+            50% {
+                text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+            }
+            100% {
+                text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+            }
+        }
+
+        .neon-text {
+            animation: neonVibration 2s infinite;
+        }
+    </style>
+</head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judy Efendi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50">
+    <nav class="bg-pink-400 p-4">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Logo or Website Name -->
+    
+              
+              <a href="/" class="text-white text-lg font-bold neon-text">Judy Effendi - Software Engineer @Target</a>
+              
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="index.html" class="text-white neon-text">Home</a>
+                <a href="about.html" class="text-white neon-text">About</a>
+                <a href="projects.html" class="text-white neon-text">Projects</a>
+                <a href="experience.html" class="text-white neon-text">Experience</a>
+                <a href="images/JUDYRESUME2024.pdf" class="text-white neon-text">Resume</a>
+                <a href="contact.html" class="text-white neon-text">Contact</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                </a>
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                  <img src="images/github.png" alt="GitHub Logo" class="h-5">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mx-auto mt-8">
+        <!-- Welcome Text -->
+        <div class="text-center mb-4">
+            <h1 class="text-4xl font-bold neon-text text-white">Welcome!</h1>
+        </div> 
+
+        <!-- Welcome Image -->
+        <div class="mb-8 flex flex-col items-center lg:flex-row">
+            <img src="images/jude.jpeg" alt="Welcome Image" class="max-w-md rounded-md mb-4 lg:mr-8 lg:mb-0">
+            <!-- Welcome Text -->
+            <div class="text-gray-700 text-center lg:text-left">
+                <p class="mb-4">I am a lifelong learner who is always looking for ways to gain more knowledge, learn new things, and enhance my background.</p>
+                <p class="mb-4">I graduated from Michigan State University with a Bachelor of Engineering in Computer Science. During my studies, I participated in multiple computer science outreach programs as an administrator, mentor, and a web developer, introducing the fundamentals of coding and web development to underrepresented communities and students from 6th to 12th grade. I also completed a capstone project with Bosch, developing a web interface for a car simulator tool. Through these experiences, I honed my communication, leadership, and problem-solving skills, as well as my ability to work with diverse and cross-functional teams.</p>
+                <p class="mb-4">I am motivated by the opportunity to empower others and ignite their interest in coding. I am always looking for new challenges and ways to grow professionally and personally. I am also eager to connect with other professionals and learn from their insights and experiences.</p>
+                <p class="mb-4">Outside of work, I love to read, learn new languages (avid Duolingo user), run, photography, and spend time with my community.</p>
+                <p class="mb-4">Feel free to message me or email me at judyeffendi2@gmail.com.</p>
+                <a href="judy-portfolio/../about" class="bg-white text-pink-400 px-6 py-2 rounded border neon-text">Learn more about me!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
