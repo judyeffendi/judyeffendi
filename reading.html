@@ -36,36 +36,10 @@
         .neon-text {
             animation: neonVibration 2s infinite;
         }
-        .new-text {
-            font-size: 2em;
-
-            color: pink;
-
-        }
-        body {
-        font-family: 'Times New Roman', Times, serif;
-        margin: 0;
-        padding: 0;
-    }
-    .large-text {
-        color: white;
-        font-size: 4em;
-        text-align: center;
-        margin-top: 50px;
-    
-    }
-    .neon-button{
-
-        position: relative;
-        top: 20px; /* adjust as needed to lower the button */
-        border-radius: 30px; /* increase border-radius for rounder corners */
-    }
-
     </style>
 </head>
 
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,49 +70,35 @@
             </div>
         </div>
     </nav>
-
-    <!-- Page Content -->
-    <div class="container mx-auto mt-8">
-        <!-- Welcome Text -->
+<style>
+    .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+  }
     
-
-        
-        <!-- Welcome Image -->
-        <div class="mb-8 flex flex-col items-center lg:flex-row">
-            <img src="images/ME.jpg" alt="Welcome Image" class="max-w-md rounded-md mb-4 lg:mr-8 lg:mb-0">
-            <!-- Welcome Text -->
-            <div class="text-gray-700 text-center lg:text-left">
-                <p class="large-text neon-text">DEVELOPER🦋LEARNER</p>
-                <p class = "new-text"id="typing-text"></p>
-
-                <a href="about.html" class="neon-button bg-white text-pink-400 px-6 py-2 rounded-20 border neon-text">Learn more about me!</a>
-                <a href="images/JUDYERESUME2024.docx.pdf" class="neon-button bg-white text-pink-400 px-6 py-2 rounded-20 border neon-text">RESUME</a>
-
+</style>
+<!-- make each hobby interest link to a page. put an image that you click on to takr to page
+ -->
+    
+  
+             <!-- Interest  -->
+             <section class="mb-8">
+                <!-- Example Interest Page -->
+            <div class="container mx-auto mt-8">
+                <h1 class="text-3xl font-bold mb-4">Books and Podcasts...coming soon</h1>
+                <!-- edit it so it's a collage and text -->
+            
+               
             </div>
-        </div>
-    </div>
+  
+            </section>
 
-    <script>
-        const text = "Hello... My name is Judy! Judy is a developer, life-long learner, fashion-addict, language-learner, avid traveler, and hobby lover. With a Bachelors in Computer Science, Judy is constantly looking for ways to learn more.";
-        const element = document.getElementById('typing-text');
-      
-        function typeWriter(text, i, callback) {
-          if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(function() {
-              typeWriter(text, i, callback);
-            }, 100); 
-          } else {
-            if (typeof callback === 'function') {
-              callback();
-            }
-          }
-        }
-      
-        document.addEventListener("DOMContentLoaded", function() {
-          typeWriter(text, 0);
-        });
-      </script>
-</body>
-</html>
+
+
+            <!-- Add more sections as needed -->
+        </div>
+
+    
+    </div>
