@@ -40,16 +40,19 @@
             }
         }
 
-        .neon-text {
-            animation: neonVibration 2s infinite;
-        }
-        .new-text {
+    .neon-text {
+        animation: neonVibration 2s infinite;
+        font-family: 'Maven Pro', sans-serif;
+
+    }
+
+    .new-text {
             font-size: 2em;
 
             color: pink;
 
-        }
-        body {
+    }
+    body {
         font-family: 'Times New Roman', Times, serif;
         margin: 0;
         padding: 0;
@@ -86,14 +89,15 @@
     
               
             <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-white">
-                <img src="images/judz22.jpg" alt="GitHub Logo" class="logo">
+                <img src="images/judz22.PNG" alt="GitHub Logo" class="logo">
               </a>
 
-              
             <!-- Navigation Links -->
-            <div class="flex items-center space-x-4 mt-4 lg:mt-4">
+            <div class="flex items-center space-x-4 mt-4 lg:mt-4 flex-wrap">
+
 
                 <div class="flex items-center space-x-4 mt-4 lg:mt-4">
+                    
                     <a href="index.html" class="text-white neon-text">HOME</a>
                     <a href="about.html" class="text-white neon-text">ABOUT</a>
                     <a href="projects.html" class="text-white neon-text">PROJECTS</a>
@@ -119,7 +123,6 @@
             <img src="images/ME.jpg" alt="Welcome Image" class="max-w-md rounded-md mb-4 lg:mr-8 lg:mb-0">
             <!-- Welcome Text -->
             <div class="text-gray-700 text-center lg:text-left">
-                <p class="large-text neon-text">DEVELOPER🦋LEARNER</p>
                 <p class = "new-text"id="typing-text"></p>
 
                 <a href="about.html" class="neon-button bg-white text-pink-400 px-6 py-2 rounded-20 border neon-text">ABOUT ME!</a>
@@ -131,7 +134,7 @@
     </div>
 
     <script>
-        const text = "Hello... My name is Judy! Judy is a developer, life-long learner, fashion-addict, language-learner, avid traveler, and hobby lover. With a Bachelors in Computer Science, Judy is constantly looking for ways to learn more.";
+        const text = "Hello... My name is Judy Effendi! Judy is a developer, life-long learner, fashion-addict, language-learner, avid traveler, and hobby lover. With a Bachelors in Computer Science, Judy is constantly looking for ways to learn more.";
         const element = document.getElementById('typing-text');
       
         function typeWriter(text, i, callback) {
