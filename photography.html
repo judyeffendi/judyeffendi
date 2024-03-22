@@ -43,6 +43,12 @@
         .neon-text {
             animation: neonVibration 2s infinite;
         }
+
+        .neon-button{
+        position: relative;
+        top: 20px; /* adjust as needed to lower the button */
+        border-radius: 30px; /* increase border-radius for rounder corners */
+        }
     </style>
 </head>
 
@@ -59,7 +65,9 @@
             <!-- Logo or Website Name -->
     
               
-            <img src="images/judz22.jpg" alt="Welcome Image" class="logo">
+            <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-white">
+                <img src="images/judz22.jpg" alt="GitHub Logo" class="logo">
+              </a>
               
             <!-- Navigation Links -->
             <div class="flex items-center space-x-4 mt-4 lg:mt-4">
@@ -67,7 +75,6 @@
                 <a href="about.html" class="text-white neon-text">ABOUT</a>
                 <a href="projects.html" class="text-white neon-text">PROJECTS</a>
                 <a href="experience.html" class="text-white neon-text">EXPERIENCE</a>
-                <a href="contact.html" class="text-white neon-text">CONTACT</a>
                 <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
                   <img src="images/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
                 </a>
@@ -88,7 +95,8 @@
 </style>
 <!-- make each hobby interest link to a page. put an image that you click on to takr to page
  -->
-    
+ <a href="contact.html" class="neon-button bg-white text-pink-400 px-6 py-2 rounded-20 border neon-text">CONTACT ME!</a>
+
   
              <!-- Interest  -->
              <section class="mb-8">
