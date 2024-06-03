@@ -1,0 +1,61 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100px; 
+    height: auto; 
+    display: block; 
+    margin: 10px; 
+}
+
+@keyframes neonVibration {
+    0% {
+        text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+    }
+    50% {
+        text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+    }
+    100% {
+        text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+    }
+}
+
+.neon-text {
+    animation: neonVibration 2s infinite;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.new-text {
+    font-size: 2em;
+    color: pink;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.large-text {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.neon-button {
+    position: relative;
+    top: 20px;
+    border-radius: 30px; 
+}
+

@@ -1,0 +1,27 @@
+
+.experience-container {
+    padding: 2rem;
+}
+
+.experience {
+    margin-bottom: 2rem;
+}
+
+.position {
+    font-weight: bold;
+}
+
+.location {
+    font-style: italic;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.responsibility {
+    margin-top: 0.5rem;
+    list-style-type: square;
+    margin-left: 1rem;
+}
+
