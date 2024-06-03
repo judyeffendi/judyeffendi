@@ -1,0 +1,22 @@
+.week-box {
+    background-color: #ff99cc;
+    border: 2px solid hsl(330, 83%, 74%);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 800px; 
+    margin: 20px auto; /* Center the boxes */
+}
+.week-box h2 {
+    color: #fff;
+    background-color: #ee68ab;
+    border-radius: 5px;
+    padding: 5px;
+}
+.day-entry {
+    margin-bottom: 10px;
+}
+.day-entry strong {
+    display: inline-block;
+    width: 50px;
+}
