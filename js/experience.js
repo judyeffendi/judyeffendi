@@ -97,11 +97,11 @@ function createExperienceSections() {
 
         experienceDiv.innerHTML = `
             <p>${experience.company}</p>
-            <p class="location">${experience.location}</p>
-            <p class="position">${experience.position}</p>
-            <p class="date">${experience.date}</p>
+            <p class="text location">${experience.location}</p>
+            <p class="text position">${experience.position}</p>
+            <p class="text date">${experience.date}</p>
             <ul>
-                ${experience.responsibilities.map(responsibility => `<li class="responsibility">${responsibility}</li>`).join('')}
+                ${experience.responsibilities.map(responsibility => `<li class="text responsibility">${responsibility}</li>`).join('')}
             </ul>
         `;
 

@@ -32,7 +32,11 @@
 
 .neon-text {
     animation: neonVibration 2s infinite;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Oleo Script Swash Caps';
+}
+
+.text {
+    font-family: 'Oleo Script Swash Caps';
 }
 
 .new-text {
@@ -41,7 +45,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Oleo Script Swash Caps';
     margin: 0;
     padding: 0;
 }
