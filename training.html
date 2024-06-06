@@ -4,44 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>JudzTheCoder</title>
-
-</head>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JudzTheCoder</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body class="bg-pink-50">
+
     <nav class="bg-pink-300 p-4">
         <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <!-- Logo or Website Name -->
-    
-              
-            <a href="index.html" class="text-white">
-                <img src="images/icons/judz22.PNG" alt="GitHub Logo" class="logo">
-              </a>
-              
-            <!-- Navigation Links -->
-             <div class="flex items-center space-x-4 mt-4 lg:mt-4">
-                <a href="index.html" class="text-white neon-text">HOME</a>
-                <a href="about.html" class="text-white neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
-                  <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+            <div class="flex items-center">
+                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
+                <a href="index.html" class="text-white ml-4">
+                    <img src="images/icons/judz22.PNG" alt="GitHub Logo" class="logo">
                 </a>
-                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
-                  <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
-                </a>
+            </div>
+            <div class="flex items-center space-x-4 mt-4 lg:mt-4 flex-wrap">
+                <div class="flex items-center space-x-4 mt-4 lg:mt-4">
+                    <a href="index.html" class="text-white neon-text">HOME</a>
+                    <a href="about.html" class="text-white neon-text">ABOUT</a>
+                    <a href="projects.html" class="text-white neon-text">PROJECTS</a>
+                    <a href="experience.html" class="text-white neon-text">EXPERIENCE</a>
+                    <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
+                        <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                    </a>
+                    <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
+                        <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="training.html">Training</a>
+        <a href="photography.html">Photography</a>
+        <a href="blog.html">Blog</a>
+    </div>
+
 
 <!-- make each hobby interest link to a page. put an image that you click on to takr to page
  -->
@@ -91,3 +97,4 @@
 
     
     </div>
+    <script src="js/sidebar.js"></script>
