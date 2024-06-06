@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    border-right: 2px solid #ff66b2;
+    border-right: 2px solid #fcb6c2;
 }
 
 .sidebar a {
@@ -47,7 +47,7 @@ body {
     font-size: 30px; /* smaller font size */
     cursor: pointer;
     color: white;
-    /* padding: 5px 10px; smaller padding */
+    padding: 5px 10px; 
     border: none;
 }
 
