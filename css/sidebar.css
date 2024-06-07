@@ -39,7 +39,7 @@ body {
 }
 
 #main {
-    transition: margin-left .5s;
+    transition: margin-left 0.5s;
     padding: 16px;
 }
 
@@ -47,7 +47,7 @@ body {
     font-size: 30px; /* smaller font size */
     cursor: pointer;
     color: white;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     border: none;
 }
 
@@ -59,4 +59,15 @@ body {
     display: block;
     margin: 0 auto 20px auto;
     width: 150px;
+}
+
+/* Center content on larger screens */
+.max-w-7xl {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sidebar open/close functionality */
+#main.active {
+    margin-left: 250px;
 }
