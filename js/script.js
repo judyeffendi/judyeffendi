@@ -18,3 +18,14 @@ function typeWriter(text, i, callback) {
 document.addEventListener("DOMContentLoaded", function() {
     typeWriter(text, 0);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.collage-container img');
+    
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            console.log(`Image ${image.alt} clicked`);
+            // Here you can add functionality to display the image in a modal, for example.
+        });
+    });
+});

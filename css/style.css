@@ -94,3 +94,34 @@ background-color: #e64d89; /* Slightly darker pink on hover */
 .icon {
     margin-right: 0.5rem;
 }
+
+.collage-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1200px;
+    gap: 10px;
+}
+
+.collage-container img {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
