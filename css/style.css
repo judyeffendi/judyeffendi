@@ -101,7 +101,9 @@ background-color: #e64d89; /* Slightly darker pink on hover */
     width: 80%;
     max-width: 1200px;
     gap: 10px;
+    margin: 0 auto; /* Add this line to center the collage */
 }
+
 
 .collage-container img {
     flex: 1 1 calc(33.333% - 10px);
@@ -124,4 +126,8 @@ background-color: #e64d89; /* Slightly darker pink on hover */
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 1.2em;
+}
+.description-text {
+    font-family: 'Oleo Script Swash Caps';
+    color: #ff66b2; /* Rose Pink */
 }
