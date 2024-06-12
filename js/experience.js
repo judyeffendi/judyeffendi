@@ -59,7 +59,7 @@ let experiences = [
         company: "College of Engineering, MSU",
         location: "East Lansing, MI",
         position: "Ambassador, Women in Engineering",
-        date: "January 2022-April 2023",
+        date: "January 2020-April 2023",
         responsibilities: [
             "Led and administrated K-12 outreach activities like ‘Girls’ Stem Day’ and ‘Introduce a Girl to Engineering’ to recruit and encourage girls to pursue careers within the engineering field.",
             "Encouraged opportunities for academic, personal, and professional growth by organizing, leading, and planning a 6-week Leadership Series for 30+ undergraduate Women in Engineering."
