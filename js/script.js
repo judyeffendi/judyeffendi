@@ -181,7 +181,7 @@ class WorkoutDescription {
                 'cardio-2':  `
                 Warm-Up (5 minutes):
                 - 5 minutes of jogging at a moderate pace
-                Speed Workout - Endurance Work (28 minutes):
+
                 Sprint Intervals - Speed Work (25 Min)
                 1. Sprint 1
                    - Sprint for 30 seconds at maximum effort (Speed 9-12)
