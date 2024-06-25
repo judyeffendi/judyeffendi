@@ -71,7 +71,7 @@ let experiences = [
         position: "TEALS Teacher for AP Computer Science",
         date: "August 2024-",
         responsibilities: [
-            "Teaching AP Computer Science Principles to Junior-Senior Students."
+            "Teaching AP Computer Science, Object Oriented Programming in Java, to Junior-Senior Students."
         ]
     },
     {
