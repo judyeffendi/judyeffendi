@@ -70,6 +70,30 @@
   
             </section>
 
+            <!-- Add this search bar above your week-boxes, after the <h1> -->
+<div class="flex justify-center my-6">
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="Search week or activity..."
+    class="border rounded px-4 py-2 w-1/2"
+    onkeyup="filterWeeks()"
+  />
+</div>
+
+<!-- ...existing week-boxes... -->
+
+<script>
+function filterWeeks() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toLowerCase();
+  const weekBoxes = document.querySelectorAll('.week-box');
+  weekBoxes.forEach(box => {
+    const text = box.textContent.toLowerCase();
+    box.style.display = text.includes(filter) ? '' : 'none';
+  });
+}
+</script>
 
             <body>            
                 <div class="week-box">
@@ -1065,9 +1089,9 @@
                     <h2>Week 93</h2>
                     <div class="day-entry"><strong>Mon:</strong>  cycle</div>
                     <div class="day-entry"><strong>Tue:</strong>  KB </div>
-                    <div class="day-entry"><strong>Wed:</strong>  Peleton </div>
+                    <div class="day-entry"><strong>Wed:</strong>  walks </div>
                     <div class="day-entry"><strong>Thurs:</strong>   KB</div>
-                    <div class="day-entry"><strong>Fri:</strong> RUN  </div>
+                    <div class="day-entry"><strong>Fri:</strong> RUN and hot yoga  </div>
                     <div class="day-entry"><strong>Sat:</strong> KB  </div>
                     <div class="day-entry"><strong>Sun:</strong> walk/run</div>
                 </div>
