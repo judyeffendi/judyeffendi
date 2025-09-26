@@ -228,6 +228,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const typewriter = new Typewriter("typing-text", "• Life-Long Learner •Traveler •Developer");
+    const typewriter = new Typewriter("typing-text", "• Life-Long Learner •Traveler •Developer • 2026 Medical School Applicant");
     typewriter.typeWriter();
 });
