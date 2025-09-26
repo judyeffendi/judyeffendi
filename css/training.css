@@ -1,6 +1,6 @@
 .week-box {
-    background-color: #ff99cc;
-    border: 2px solid hsl(330, 83%, 74%);
+    background-color: navy;
+    border: 2px solid hsl(243, 90%, 48%);
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
@@ -9,7 +9,7 @@
 }
 .week-box h2 {
     color: #fff;
-    background-color: #ee68ab;
+    background-color: navy;
     border-radius: 5px;
     padding: 5px;
 }
