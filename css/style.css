@@ -20,13 +20,13 @@
 
 @keyframes neonVibration {
     0% {
-        text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+        text-shadow: 0 0 10px navy, 0 0 20px navy, 0 0 30px navy;
     }
     50% {
-        text-shadow: 0 0 10px #f50057, 0 0 40px #f50057, 0 0 60px #f50057;
+        text-shadow: 0 0 10px navajowhite, 0 0 40px navajowhite, 0 0 60px navajowhite;
     }
     100% {
-        text-shadow: 0 0 10px #f50057, 0 0 20px #f50057, 0 0 30px #f50057;
+        text-shadow: 0 0 10px navy, 0 0 20px navy, 0 0 30px navy;
     }
 }
 
