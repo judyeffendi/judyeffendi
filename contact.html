@@ -1,93 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
-    <title>Judy Effendi</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg"/>
+  <title>Contact • Judy Effendi</title>
+  <!-- Tailwind v2 -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/sidebar.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- NAVBAR -->
-    <nav class="bg-navy-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.png" alt="Logo" class="logo h-8 w-8">
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
-                </a>
-            </div>
+  <!-- NAVBAR (navy) -->
+  <nav class="bg-blue-900 p-4">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+      <div class="flex items-center">
+        <span class="openbtn text-white text-2xl cursor-pointer" onclick="openNav()">&#9776;</span>
+        <a href="index.html" class="text-white ml-4">
+          <img src="images/icons/judz22.png" alt="Judy Effendi Logo" class="logo h-8 w-8"/>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
+        <a href="index.html" class="text-white hover:text-teal-200">HOME</a>
+        <a href="about.html" class="text-white hover:text-teal-200">ABOUT</a>
+        <a href="projects.html" class="text-white hover:text-teal-200">PROJECTS</a>
+        <a href="experience.html" class="text-white hover:text-teal-200">EXPERIENCE</a>
+        <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+          <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn" class="h-5"/>
+        </a>
+        <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+          <img src="images/icons/github.png" alt="GitHub" class="h-5"/>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo"/>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="projects.html">📽 Projects</a>
+    <a href="experience.html">🔰 Experience</a>
+    <a href="training.html">🏃🏻‍♀ Training</a>
+    <a href="photography.html">📸 Photography</a>
+    <a href="blog.html">💻 Blog</a>
+    <a href="travel.html">🗺 Travel</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="container mx-auto px-4 mt-8">
+    <section class="relative overflow-hidden rounded-2xl shadow-lg border border-gray-100">
+      <img src="images/digital/P1010540.JPG" alt="Contact banner" class="w-full h-56 md:h-72 object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-transparent opacity-80"></div>
+      <div class="absolute bottom-0 p-6 md:p-8">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white">Get in Touch</h1>
+        <p class="mt-2 text-gray-200 max-w-2xl">
+          Always happy to connect—projects, collabs, or just to say hi.
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <!-- CONTACT CARDS -->
+  <main class="container mx-auto px-4 mt-10 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Email -->
+      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition overflow-hidden">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none"
+             style="background: radial-gradient(600px circle at var(--x,50%) var(--y,50%), rgba(20,184,166,0.08), transparent 40%);"></div>
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-blue-900">Email</h2>
+            <!-- icon -->
+            <svg class="h-6 w-6 text-blue-800 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="mt-2 text-gray-600 break-all">judyeffendi2@gmail.com</p>
+          <div class="mt-4 flex gap-2">
+            <a href="mailto:judyeffendi2@gmail.com"
+               class="px-3 py-1.5 rounded-md text-sm font-medium bg-blue-900 text-white hover:bg-blue-800 transition">Compose</a>
+            <button type="button" onclick="copyToClipboard('judyeffendi2@gmail.com', this)"
+                    class="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-200 hover:border-gray-300 transition">
+              Copy
+            </button>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo">
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
+      <!-- Instagram -->
+      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition overflow-hidden">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none"
+             style="background: radial-gradient(600px circle at var(--x,50%) var(--y,50%), rgba(236,72,153,0.08), transparent 40%);"></div>
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-blue-900">Instagram</h2>
+            <!-- icon -->
+            <svg class="h-6 w-6 text-pink-600 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3.5" stroke-width="2"></circle>
+              <rect x="3" y="3" width="18" height="18" rx="4" stroke-width="2"></rect>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <p class="mt-2 text-gray-600">@judyeffendi2</p>
+          <div class="mt-4 flex gap-2">
+            <a href="https://www.instagram.com/judyeffendi2/" target="_blank" rel="noopener noreferrer"
+               class="px-3 py-1.5 rounded-md text-sm font-medium bg-pink-600 text-white hover:bg-pink-500 transition">Open</a>
+            <button type="button" onclick="copyToClipboard('https://www.instagram.com/judyeffendi2/', this)"
+                    class="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-200 hover:border-gray-300 transition">
+              Copy link
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition overflow-hidden">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none"
+             style="background: radial-gradient(600px circle at var(--x,50%) var(--y,50%), rgba(59,130,246,0.08), transparent 40%);"></div>
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-blue-900">LinkedIn</h2>
+            <!-- icon -->
+            <svg class="h-6 w-6 text-blue-600 opacity-90" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.46 4.73-2.46C20.26 7.74 24 10 24 15.08V24h-5v-7.91c0-1.88-.04-4.29-2.61-4.29-2.61 0-3.01 2.04-3.01 4.16V24H7.5V8z"/>
+            </svg>
+          </div>
+          <p class="mt-2 text-gray-600 break-words">linkedin.com/in/judy-effendi</p>
+          <div class="mt-4 flex gap-2">
+            <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer"
+               class="px-3 py-1.5 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-500 transition">Connect</a>
+            <button type="button" onclick="copyToClipboard('https://www.linkedin.com/in/judy-effendi', this)"
+                    class="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-200 hover:border-gray-300 transition">
+              Copy link
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="container mx-auto mt-8">
-        <div class="contact-container">
-            <h1 class="text-3xl font-bold mb-4 text-navy-300 text">Get in Touch</h1>
-
-            <p class="text-gray-700 mb-4">Feel free to reach out to me through various channels. I'd love to hear from you!</p>
-
-            <div class="contact-info">
-                <p class="flex items-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-navy-500 icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h0a3 3 0 1 1-6 0h0a3 3 0 1 1-6 0v0a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v0a3 3 0 1 1-6 0h0"></path>
-                    </svg>
-                    <a href="mailto:judyeffendi2@gmail.com" class="text-navy-500 text">Email: judyeffendi2@gmail.com</a>
-                </p>
-
-                <p class="flex items-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-navy-500 icon">
-                        <path stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" d="M14 2.14a15.91 15.91 0 0 1 0 19.72M9 17l-3 3m0 0l-3-3m3 3V10"></path>
-                    </svg>
-                    <a href="https://www.instagram.com/judyeffendi2/" target="_blank" rel="noopener noreferrer" class="text-navy-500 text">Instagram: @judyeffendi2</a>
-                </p>
-
-                <p class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-navy-500 icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V5m6 14V5"></path>
-                    </svg>
-                    <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-navy-500 text">LinkedIn: linkedin.com/in/judy-effendi</a>
-                </p>
-            </div>
+    <!-- CTA -->
+    <div class="mt-10 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="text-gray-700">
+          Prefer email? Click <span class="font-semibold">Compose</span> above—or send a quick hello and what you’d like to build together.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full border border-gray-200 text-sm">Detroit</span>
+          <span class="px-3 py-1 rounded-full border border-gray-200 text-sm">Ann Arbor</span>
+          <span class="px-3 py-1 rounded-full border border-gray-200 text-sm">Remote-friendly</span>
         </div>
+      </div>
     </div>
-    <script src="js/sidebar.js"></script>
+  </main>
 
+  <script>
+    // subtle "spotlight" hover following the cursor on cards
+    document.querySelectorAll('.group').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--x', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--y', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    function copyToClipboard(text, btn) {
+      if (!navigator.clipboard) {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      } else {
+        navigator.clipboard.writeText(text);
+      }
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(()=> btn.textContent = original, 1200);
+    }
+  </script>
+
+  <script src="js/sidebar.js"></script>
 </body>
 </html>
-
-
-
-
-
