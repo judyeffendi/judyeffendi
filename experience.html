@@ -1,64 +1,129 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
-    <title>Judy Effendi</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c4a6e" />
+  <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg" />
+  <title>Judy Effendi — Experience</title>
+
+  <!-- Tailwind (kept at 2.x to match your setup). Consider upgrading to v3 when you can. -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 antialiased"> 
+  <!-- NAVBAR -->
+  <nav class="bg-blue-900 py-4 shadow">
+    <div class="container mx-auto px-4 flex items-center justify-between flex-wrap">
+      <!-- Left: menu + logo -->
+      <div class="flex items-center space-x-3">
+        <button id="menuButton"
+                class="text-white focus:outline-none focus:ring-2 focus:ring-white rounded p-1"
+                aria-label="Open navigation menu"
+                aria-controls="sidebar"
+                aria-expanded="false">
+          <!-- Hamburger icon -->
+          <span class="text-2xl leading-none">&#9776;</span>
+        </button>
+        <a href="index.html" class="flex items-center text-white" aria-label="Go to home">
+          <img src="images/icons/judz22.PNG" alt="Judy Effendi logo" class="h-8 w-8 rounded" />
+        </a>
+      </div>
 
-    <!-- NAVBAR -->
-    <nav class="bg-blue-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.PNG" alt="Logo" class="logo h-8 w-8">
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
-                </a>
-            </div>
-        </div>
+      <!-- Right: primary nav links -->
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
+        <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
+        <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
+        <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
+        <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
+        <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80" aria-label="LinkedIn profile">
+          <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn" class="h-5" />
+        </a>
+        <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80" aria-label="GitHub profile">
+          <img src="images/icons/github.png" alt="GitHub" class="h-5" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR (off-canvas) -->
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <aside id="sidebar"
+         class="fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform -translate-x-full transition-transform duration-300 ease-out z-50"
+         aria-hidden="true">
+    <div class="flex items-center justify-between px-4 py-4 border-b">
+      <div class="flex items-center space-x-2">
+        <img src="images/icons/judz22.PNG" alt="Logo" class="h-8 w-8 rounded" />
+        <span class="font-semibold">Menu</span>
+      </div>
+      <button id="closeButton" class="text-2xl leading-none" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="px-4 py-2 space-y-2">
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="index.html">🏠 Home</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="about.html">ℹ️ About</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="projects.html">📽 Projects</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="experience.html">🔰 Experience</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="training.html">🏃🏻‍♀️ Training</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="photography.html">📸 Photography</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="blog.html">💻 Blog</a>
+      <a class="block px-3 py-2 rounded hover:bg-gray-100" href="travel.html">🗺 Travel</a>
     </nav>
+  </aside>
 
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
-    </div>
+  <!-- MAIN CONTENT -->
+  <main class="container mx-auto px-4 mt-10 mb-20">
+    <header class="mb-8">
+      <h1 class="text-3xl font-extrabold tracking-tight text-blue-900">Professional Experience</h1>
+      <p class="text-gray-600 mt-1">A snapshot of roles where I build, lead, and learn.</p>
+    </header>
 
-    <!-- Main Content -->
-    <div class="container mx-auto mt-8">
-        <div class="experience-container">
-            <h1 class="text-3xl font-bold mb-4 text-pink-300 text">Professional Experience</h1>
-            <!-- Experience sections will be dynamically inserted here -->
-        </div>
-    </div>
+    <!-- Experience sections will be dynamically injected into this container by js/experience.js -->
+    <section id="experience-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Fallback content for when JS is disabled -->
+      <article class="p-5 rounded-2xl shadow bg-white">
+        <h2 class="font-semibold text-gray-900">Your experience will load here</h2>
+        <p class="text-gray-600 text-sm mt-1">Connect <code>js/experience.js</code> to populate this section or replace with static content.</p>
+      </article>
+    </section>
+  </main>
 
-    <script src="js/experience.js"></script>
-    <script src="js/sidebar.js"></script>
+  <!-- SCRIPTS -->
+  <!-- If you already have your own sidebar.js, keep it; this inline script ensures functionality even if it’s missing. -->
+  <script>
+    (function () {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      const menuButton = document.getElementById('menuButton');
+      const closeButton = document.getElementById('closeButton');
 
+      function openNav() {
+        sidebar.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
+        sidebar.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeNav() {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        sidebar.setAttribute('aria-hidden', 'true');
+      }
+
+      // expose for legacy calls
+      window.openNav = openNav;
+      window.closeNav = closeNav;
+
+      menuButton?.addEventListener('click', openNav);
+      closeButton?.addEventListener('click', closeNav);
+      overlay?.addEventListener('click', closeNav);
+    })();
+  </script>
+  <script src="js/experience.js" defer></script>
 </body>
 </html>
