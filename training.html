@@ -1,101 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
-    <title>Judy Effendi</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg" />
+  <title>Training • Judy Effendi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <style>
+    /* Subtle card glow */
+    .glow:hover { box-shadow: 0 10px 30px rgba(13, 42, 148, 0.25), 0 2px 8px rgba(13, 42, 148, 0.15); }
+    .scrim { background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.35)); }
+    .hero-grid {
+      background:
+        radial-gradient(600px 200px at 10% 0%, rgba(255,255,255,0.08), transparent 60%),
+        radial-gradient(600px 200px at 90% 0%, rgba(255,255,255,0.06), transparent 60%);
+    }
+    html { scroll-behavior:smooth; }
+  </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- NAVBAR -->
-    <nav class="bg-blue-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.png" alt="Logo" class="logo h-8 w-8">
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
+  <!-- NAVBAR (navy) -->
+  <nav class="bg-blue-900 p-4">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+      <div class="flex items-center">
+        <span class="openbtn text-white text-2xl cursor-pointer" onclick="openNav()">&#9776;</span>
+        <a href="index.html" class="text-white ml-4">
+          <img src="images/icons/judz22.png" alt="Logo" class="logo h-8 w-8">
+        </a>
+      </div>
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
+        <a href="index.html" class="text-white hover:text-teal-200">HOME</a>
+        <a href="about.html" class="text-white hover:text-teal-200">ABOUT</a>
+        <a href="projects.html" class="text-white hover:text-teal-200">PROJECTS</a>
+        <a href="experience.html" class="text-white hover:text-teal-200">EXPERIENCE</a>
+        <a href="photography.html" class="text-white hover:text-teal-200">PHOTOGRAPHY</a>
+        <a href="blog.html" class="text-white hover:text-teal-200">BLOG</a>
+        <a href="travel.html" class="text-white hover:text-teal-200">TRAVEL</a>
+        <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+          <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+        </a>
+        <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+          <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
+        </a>
+      </div>
     </div>
+  </nav>
 
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="projects.html">📽 Projects</a>
+    <a href="experience.html">🔰 Experience</a>
+    <a href="training.html">🏃🏻‍♀ Training</a>
+    <a href="photography.html">📸 Photography</a>
+    <a href="blog.html">💻 Blog</a>
+    <a href="travel.html">🗺 Travel</a>
+  </div>
 
-<!-- make each hobby interest link to a page. put an image that you click on to takr to page
- -->
+  <!-- MAIN -->
+  <main class="container mx-auto px-4 mt-8">
+    <!-- Hero -->
+    <section class="relative overflow-hidden rounded-2xl border border-gray-100 shadow-lg bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 hero-grid">
+      <div class="absolute inset-0 opacity-10"
+           style="background-image:
+             linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px),
+             linear-gradient(0deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+             background-size: 36px 36px;"></div>
+      <div class="relative p-6 md:p-10 text-white">
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Training</h1>
+        <p class="mt-2 md:mt-3 text-white/90 max-w-3xl">
+          Run, lift, recover, repeat. Dive into detailed logs and session-ready workouts.
+        </p>
 
-  
-             <!-- Interest  -->
-             <section class="mb-8">
-                <!-- Example Interest Page -->
-            <div class="container mx-auto mt-8">
-                <h1 class="text-3xl font-bold mb-4 text-navy-300 text text-center">Training</h1>
-                <!-- edit it so it's a collage and text -->
-            
-                <div class="grid grid-cols-4 gap-8">
-                    <!-- Skill Card 1 -->
-                    <div class="bg-white p-4 rounded-md shadow-md flex items-center justify-center">
-                        <a href="traininglogs.html"  class="text-white">
-                            <img src="images/hobbies/traininglogs.png" alt="GitHub Logo" class="h-13">
-                        </a>
-                    </div>
-                
-                    <!-- Skill Card 2 -->
-                    <div class="bg-white p-4 rounded-md shadow-md flex items-center justify-center">
-                        <a href="nutrition.html"  class="text-white">
-                            <img src="images/hobbies/nutrition.png" alt="GitHub Logo" class="h-13">
-                        </a>
-                    </div>
-                
-                    <!-- Skill Card 3 -->
-                    <div class="bg-white p-4 rounded-md shadow-md flex items-center justify-center">
-                        <a href="workouts.html" class="text-white">
-                            <img src="images/hobbies/website.png" alt="GitHub Logo" class="h-13">
-                        </a>
-                    </div>
-                </div>
-                
-            
-            </div>
-
-          
-  
-            </section>
-
-
-
-            <!-- Add more sections as needed -->
+        <!-- Quick actions -->
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="traininglogs.html"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-blue-900 font-semibold hover:bg-white/90 transition glow">
+            📓 Open Training Logs
+          </a>
+          <a href="workouts.html"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/30 text-white hover:bg-white/10 transition">
+            🏋️ View Workouts
+          </a>
         </div>
 
-    
-    </div>
-    <script src="js/sidebar.js"></script>
+        <!-- Chips -->
+        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Marathon</span>
+          <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Strength</span>
+          <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Mobility</span>
+          <span class="px-2 py-1 rounded-full bg-white/10 border border-white/20">Recovery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Training Logs -->
+      <a href="traininglogs.html"
+         class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition glow">
+        <div class="relative h-72 md:h-[26rem]">
+          <img src="images/hobbies/traininglogs.png" alt="Training Logs" class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 scrim"></div>
+          <div class="absolute bottom-0 p-5 md:p-6">
+            <span class="inline-block mb-2 text-[10px] md:text-xs uppercase tracking-wider px-2 py-1 rounded-full bg-white/90 text-blue-900 font-semibold">Logs</span>
+            <h2 class="text-white text-2xl md:text-3xl font-bold drop-shadow">Training Logs</h2>
+            <p class="text-gray-200 text-sm md:text-base mt-1 max-w-lg">
+              Week-by-week mileage, cardio, strength splits, and progress.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Workouts -->
+      <a href="workouts.html"
+         class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition glow">
+        <div class="relative h-72 md:h-[26rem]">
+          <img src="images/hobbies/website.png" alt="Workouts" class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 scrim"></div>
+          <div class="absolute bottom-0 p-5 md:p-6">
+            <span class="inline-block mb-2 text-[10px] md:text-xs uppercase tracking-wider px-2 py-1 rounded-full bg-white/90 text-blue-900 font-semibold">Programs</span>
+            <h2 class="text-white text-2xl md:text-3xl font-bold drop-shadow">Workouts</h2>
+            <p class="text-gray-200 text-sm md:text-base mt-1 max-w-lg">
+              Structured sessions: runs, lifts, intervals, and active recovery.
+            </p>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Footer note -->
+    <section class="mt-8 rounded-2xl border border-gray-100 bg-white p-5 md:p-6 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="text-gray-700">
+          Tip: Save this page to your phone’s home screen for quick access before workouts.
+        </p>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full border border-gray-200">Detroit</span>
+          <span class="px-2 py-1 rounded-full border border-gray-200">Ann Arbor</span>
+          <span class="px-2 py-1 rounded-full border border-gray-200">On the road</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 p-4 text-center mt-10">
+    <p class="text-gray-600">Copyright &copy; 2025 Judy Effendi. All rights reserved.</p>
+  </footer>
+
+  <script src="js/sidebar.js"></script>
+</body>
+</html>
