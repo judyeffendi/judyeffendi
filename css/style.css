@@ -131,3 +131,14 @@ background-color: navy; /* Slightly darker pink on hover */
     font-family: 'Oleo Script Swash Caps';
     color: navy; /* Rose Pink */
 }
+
+.drop-cap{
+  float:left;font-weight:800;font-size:3.2rem;line-height:1;
+  margin:0.18rem 0.5rem 0 0;color:#be185d; /* pink-700 */
+}
+html{scroll-behavior:smooth;}
+.section-anchor:target{
+  text-decoration:underline;
+  text-decoration-color:#ec4899; /* pink-500 */
+  text-underline-offset:4px;
+}
