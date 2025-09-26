@@ -142,3 +142,10 @@ html{scroll-behavior:smooth;}
   text-decoration-color:navy; /* pink-500 */
   text-underline-offset:4px;
 }
+
+@supports (backdrop-filter: blur(6px)) {
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+  }
+}
