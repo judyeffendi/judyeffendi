@@ -1248,7 +1248,7 @@
                     <div class="day-entry"><strong>Sun:</strong> walk</div>
                 </div>
 
-                  </div>
+                
 
 
 
@@ -1275,112 +1275,38 @@
   </footer>
 
   <script>
-  // ===== Sidebar (your original) =====
-  function openNav() {
-    const s = document.getElementById("sidebar");
-    if (!s) return;
-    if (s.style.width && s.style.width !== "0px") {
-      s.style.width = "0";
-    } else {
-      s.style.width = "250px";
-    }
-  }
-
-  // ===== Search helpers (your original) =====
-  function filterWeeks() {
-    const filter = (document.getElementById('searchInput')?.value || '').toLowerCase();
-    const boxes = document.querySelectorAll('.week-box');
-    boxes.forEach(box => {
-      const text = box.textContent.toLowerCase();
-      box.style.display = text.includes(filter) ? '' : 'none';
-    });
-  }
-  function clearSearch() {
-    const input = document.getElementById('searchInput');
-    if (!input) return;
-    input.value = '';
-    filterWeeks();
-    input.focus();
-  }
-  function quickFilter(term) {
-    const input = document.getElementById('searchInput');
-    if (!input) return;
-    input.value = term;
-    filterWeeks();
-  }
-
-  // ===== Week normalizer (added) =====
-  // Config: tweak if your selectors differ
-  const GRID_SELECTOR = '#weeks-grid';   // container holding all week cards
-  const CARD_SELECTOR = '.week-box';     // each individual week card
-  // Try to find a title element in priority order:
-  const TITLE_CANDIDATES = ['[data-title]', 'h3', '.week-title'];
-
-  // Match "Week 1", "Wk12", "week 102", etc. (1–3 digits)
-  const WEEK_RE = /(?:^|\b)(?:week|wk)\s*(\d{1,3})(?=\b)/i;
-
-  function getTitleEl(card) {
-    for (const sel of TITLE_CANDIDATES) {
-      const el = card.querySelector(sel);
-      if (el) return el;
-    }
-    return null;
-  }
-
-  function extractWeek(card) {
-    const titleEl = getTitleEl(card);
-    const source = (titleEl?.textContent || card.textContent || '').trim();
-    const m = source.match(WEEK_RE);
-    return m ? parseInt(m[1], 10) : null;
-  }
-
-  function normalizeWeeks() {
-    const grid = document.querySelector(GRID_SELECTOR) || document.body;
-    const cards = Array.from(grid.querySelectorAll(CARD_SELECTOR));
-    if (!cards.length) return;
-
-    // Normalize each card (dataset.week, id, visible title)
-    for (const card of cards) {
-      const weekNum = extractWeek(card);
-      if (!weekNum) continue;
-
-      const code = String(weekNum).padStart(3, '0');
-      card.dataset.week = weekNum;
-
-      // ID as week-### (stable even for 100+)
-      card.id = `week-${code}`;
-
-      // Standardize the visible title if we can find it
-      const titleEl = getTitleEl(card);
-      if (titleEl) titleEl.textContent = `Week ${code}`;
+    // Sidebar open/close compatibility with your existing script
+    function openNav() {
+      const s = document.getElementById("sidebar");
+      if (!s) return;
+      if (s.style.width && s.style.width !== "0px") {
+        s.style.width = "0";
+      } else {
+        s.style.width = "250px";
+      }
     }
 
-    // Sort numerically by week (ascending). Flip b-a for descending.
-    const sortable = cards.filter(c => c.dataset.week);
-    if (sortable.length) {
-      sortable
-        .sort((a, b) => Number(a.dataset.week) - Number(b.dataset.week))
-        .forEach(c => grid.appendChild(c));
-    }
-  }
-
-  // ===== Init =====
-  (function init() {
-    if (document.readyState !== 'loading') {
-      normalizeWeeks();
-      // Optional: live-search as you type, if input exists
-      const input = document.getElementById('searchInput');
-      if (input) input.addEventListener('input', filterWeeks);
-    } else {
-      document.addEventListener('DOMContentLoaded', () => {
-        normalizeWeeks();
-        const input = document.getElementById('searchInput');
-        if (input) input.addEventListener('input', filterWeeks);
+    // Search helpers
+    function filterWeeks() {
+      const filter = (document.getElementById('searchInput').value || '').toLowerCase();
+      const boxes = document.querySelectorAll('.week-box');
+      boxes.forEach(box => {
+        const text = box.textContent.toLowerCase();
+        box.style.display = text.includes(filter) ? '' : 'none';
       });
     }
-  })();
-</script>
-
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      filterWeeks();
+      input.focus();
+    }
+    function quickFilter(term) {
+      const input = document.getElementById('searchInput');
+      input.value = term;
+      filterWeeks();
+    }
+  </script>
 
   <script src="js/sidebar.js"></script>
 </body>
