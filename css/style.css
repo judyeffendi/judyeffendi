@@ -66,7 +66,7 @@ body {
 .button {
 margin-top: 10px; /* Adjust the margin to control the vertical spacing */
 padding: 8px 16px;
-background-color: pink; /* Rose Pink */
+background-color: lightblue; /* Rose Pink */
 color: white;
 text-decoration: none;
 border-radius: 4px;
@@ -134,11 +134,11 @@ background-color: navy; /* Slightly darker pink on hover */
 
 .drop-cap{
   float:left;font-weight:800;font-size:3.2rem;line-height:1;
-  margin:0.18rem 0.5rem 0 0;color:#be185d; /* pink-700 */
+  margin:0.18rem 0.5rem 0 0;color: navy; /* pink-700 */
 }
 html{scroll-behavior:smooth;}
 .section-anchor:target{
   text-decoration:underline;
-  text-decoration-color:#ec4899; /* pink-500 */
+  text-decoration-color:navy; /* pink-500 */
   text-underline-offset:4px;
 }
