@@ -134,7 +134,7 @@
       tags: ["Pathology", "Research", "AI-in-Med"]
     },
     "NAAMA NextGen": {
-      link: "https://naama.org",
+      link: "https://naamanextgen.com",
       logo: "images/logos/naama.png",
       tags: ["Leadership", "Web", "AI-in-Med"]
     },
