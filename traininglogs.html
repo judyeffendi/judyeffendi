@@ -1,161 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
-    <title>Judy Effendi</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
+  <title>Training Logs • Judy Effendi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/sidebar.css"/>
+  <style>
+    /* Style legacy classes used in your content */
+    .week-box {
+      @apply bg-white border border-gray-100 rounded-xl shadow-sm p-5 md:p-6 transition hover:shadow-md;
+    }
+    .week-box h2 {
+      @apply text-blue-800 font-bold text-xl mb-3;
+    }
+    .day-entry {
+      @apply text-gray-700 leading-7;
+    }
+    /* small helpers */
+    .chip { @apply px-2 py-1 rounded-full text-xs border border-gray-200; }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- NAVBAR -->
-    <nav class="bg-blue-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.png" alt="Logo" class="logo h-8 w-8">
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
+  <!-- NAVBAR (navy) -->
+  <nav class="bg-blue-900 p-4">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+      <div class="flex items-center">
+        <span class="openbtn text-white text-2xl cursor-pointer" onclick="openNav()">&#9776;</span>
+        <a href="index.html" class="text-white ml-4">
+          <img src="images/icons/judz22.png" alt="Logo" class="logo h-8 w-8">
+        </a>
+      </div>
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
+        <a href="index.html" class="text-white hover:text-teal-200">HOME</a>
+        <a href="about.html" class="text-white hover:text-teal-200">ABOUT</a>
+        <a href="projects.html" class="text-white hover:text-teal-200">PROJECTS</a>
+        <a href="experience.html" class="text-white hover:text-teal-200">EXPERIENCE</a>
+        <a href="photography.html" class="text-white hover:text-teal-200">PHOTOGRAPHY</a>
+        <a href="blog.html" class="text-white hover:text-teal-200">BLOG</a>
+        <a href="travel.html" class="text-white hover:text-teal-200">TRAVEL</a>
+        <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener" class="text-white hover:opacity-80">
+          <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn" class="h-5">
+        </a>
+        <a href="https://github.com/judyeffendi" target="_blank" rel="noopener" class="text-white hover:opacity-80">
+          <img src="images/icons/github.png" alt="GitHub" class="h-5">
+        </a>
+      </div>
     </div>
+  </nav>
 
-<!-- make each hobby interest link to a page. put an image that you click on to takr to page
- -->
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="projects.html">📽 Projects</a>
+    <a href="experience.html">🔰 Experience</a>
+    <a href="training.html">🏃🏻‍♀ Training</a>
+    <a href="photography.html">📸 Photography</a>
+    <a href="blog.html">💻 Blog</a>
+    <a href="travel.html">🗺 Travel</a>
+  </div>
 
-  
-             <!-- Interest  -->
-             <section class="mb-8">
-                <!-- Example Interest Page -->
-            <div class="container mx-auto mt-8">
-                <h1 class="text-3xl font-bold mb-4 text-navy-300 text text-center">Training Logs</h1>
-                <!-- edit it so it's a collage and text -->
-                <div class="flex justify-center my-6">
-  <input
-    id="searchInput"
-    type="text"
-    placeholder="Search week or activity..."
-    class="border rounded px-4 py-2 w-1/2"
-    onkeyup="filterWeeks()"
-  />
-  <button
-    onclick="filterWeeks()"
-    class="ml-2 px-4 py-2 bg-navy-300 text-white rounded hover:bg-navy-400 transition"
-  > Search
-  </button>
-</div>
-                <p class="navy-400 text">Fitness is a huge part of my identity, through my logs you can see my training for half-marathons, marathons and triathalons. This is to track my progress and share my goals.</p>
-            
-               
-            </div>
-  
-            </section>
+  <!-- MAIN -->
+  <main class="container mx-auto mt-8 px-4">
+    <!-- Hero / Intro -->
+    <section class="relative overflow-hidden rounded-2xl border border-gray-100 shadow-lg bg-gradient-to-br from-blue-900 via-blue-800 to-teal-600">
+      <div class="absolute inset-0 opacity-10"
+           style="background-image: radial-gradient(circle at 20% 10%, white 2px, transparent 2px),
+                                    radial-gradient(circle at 80% 30%, white 2px, transparent 2px),
+                                    radial-gradient(circle at 50% 80%, white 2px, transparent 2px);
+                  background-size: 200px 200px;"></div>
+      <div class="relative p-6 md:p-10 text-white">
+        <h1 class="text-3xl md:text-4xl font-extrabold">Training Logs</h1>
+        <p class="mt-2 md:mt-3 text-white/90 max-w-3xl">
+          Fitness is a huge part of my identity — these logs track my prep for half-marathons, marathons, and triathlons.
+          Use the search to filter by week or activity.
+        </p>
 
-            <!-- Add this search bar above your week-boxes, after the <h1> -->
+        <!-- Search -->
+        <div class="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <input id="searchInput"
+                 type="text"
+                 placeholder="Search e.g. 'Week 8', 'cycle', 'hot yoga', '12.6 mile'"
+                 class="w-full sm:w-2/3 px-4 py-2 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-300"
+                 onkeyup="filterWeeks()">
+          <button onclick="filterWeeks()"
+                  class="px-4 py-2 rounded-lg bg-white/10 border border-white/30 hover:bg-white/20 transition">
+            Search
+          </button>
+          <button onclick="clearSearch()"
+                  class="px-4 py-2 rounded-lg bg-white/10 border border-white/30 hover:bg-white/20 transition">
+            Clear
+          </button>
+        </div>
 
+        <!-- Quick tags -->
+        <div class="mt-4 flex flex-wrap gap-2">
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('run')">run</button>
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('cycle')">cycle</button>
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('hot yoga')">hot yoga</button>
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('kickboxing')">kickboxing</button>
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('pilates')">pilates</button>
+          <button class="chip text-white/90 border-white/30 hover:bg-white/10" onclick="quickFilter('rest')">rest</button>
+        </div>
+      </div>
+    </section>
 
-<!-- ...existing week-boxes... -->
+    <!-- Grid of Weeks -->
+    <section class="mt-8">
+      <div id="weeksGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 
-<script>
-function filterWeeks() {
-  const input = document.getElementById('searchInput');
-  const filter = input.value.toLowerCase();
-  const weekBoxes = document.querySelectorAll('.week-box');
-  weekBoxes.forEach(box => {
-    const text = box.textContent.toLowerCase();
-    box.style.display = text.includes(filter) ? '' : 'none';
-  });
-}
-</script>
+        <!-- ====== PASTE ALL YOUR WEEK BOXES INSIDE THIS GRID ====== -->
+        <!-- I included your first several weeks as examples. Add the rest below in the same format. -->
 
-            <body>            
-                <div class="week-box">
-                    <h2>Week 1</h2>
-                    <div class="day-entry"><strong>Mon:</strong> 2 mile run, 1 mile of sprints, and 20 min strength</div>
-                    <div class="day-entry"><strong>Tue:</strong> 4.6 mile run + abs </div>
-                    <div class="day-entry"><strong>Wed:</strong> 45 min cross-training (2 miles)</div>
-                    <div class="day-entry"><strong>Thurs:</strong> 3.1 miles run + abs </div>
-                    <div class="day-entry"><strong>Fri:</strong> 3.05 mile run + strength</div>
-                    <div class="day-entry"><strong>Sat:</strong> 1 hour cross-training (3.2 miles)</div>
-                    <div class="day-entry"><strong>Sun:</strong> REST</div>
-                </div>
-            
-                <div class="week-box">
-                    <h2>Week 2</h2>
-                    <div class="day-entry"><strong>Mon:</strong> 3.2 mile run + 20 min strength</div>
-                    <div class="day-entry"><strong>Tue:</strong> 4.5 mile run + abs</div>
-                    <div class="day-entry"><strong>Wed:</strong> 45 min cross-training (2.24 miles)</div>
-                    <div class="day-entry"><strong>Thurs:</strong> 3.1 run + 30 min total body strength</div>
-                    <div class="day-entry"><strong>Fri:</strong> Pilates and yoga (ACTIVE REST)</div>
-                    <div class="day-entry"><strong>Sat:</strong> 60 min cross-training (3.5 miles)</div>
-                    <div class="day-entry"><strong>Sun:</strong> 4.1 mile run + 20 min lower body strength</div>
-                </div>
-            
-                <!-- Add more week boxes as needed -->
-            
-                <div class="week-box">
-                    <h2>Week 3</h2>
-                    <div class="day-entry"><strong>Mon:</strong> 4.35 mile run + 20 min strength arms</div>
-                    <div class="day-entry"><strong>Tue:</strong> 6.64 mile run + abs </div>
-                    <div class="day-entry"><strong>Wed:</strong> 45 min cross-fit (2.05 miles) + 1 mile (3.1)</div>
-                    <div class="day-entry"><strong>Thurs:</strong> 3.2 mile run + upper body (3.2)</div>
-                    <div class="day-entry"><strong>Fri:</strong> 60 min cross-fit (3.5 mile)</div>
-                    <div class="day-entry"><strong>Sat:</strong> Yoga</div>
-                    <div class="day-entry"><strong>Sun:</strong> 8.5 mile cycle</div>
-                </div>
-                <div class="week-box">
-                    <h2>Week 4</h2>
-                    <div class="day-entry"><strong>Mon:</strong> 13 mile cycle + 1 mile (1) + abs</div>
-                    <div class="day-entry"><strong>Tue:</strong> Bike cross-fit (8.71 mile bike) + 1 mile</div>
-                    <div class="day-entry"><strong>Wed:</strong> 45 min cross-fit (2.23 mile) + 1 mile (3.23)</div>
-                    <div class="day-entry"><strong>Thurs:</strong> 2 miles + 5.8 mile cycle + Abs</div>
-                    <div class="day-entry"><strong>Fri:</strong> Yoga (ACTIVE REST)</div>
-                    <div class="day-entry"><strong>Sat:</strong> 60 min cross-fit (3.5)</div>
-                    <div class="day-entry"><strong>Sun:</strong> 5 mile run</div>
-                    <div><strong>Week 4 total:</strong> (15.73 run) (27.51 bike)</div>
-                </div>
-            
-                <div class="week-box">
-                    <h2>Week 5</h2>
-                    <div class="day-entry"><strong>Mon:</strong> 13.35 mile cycle + 1.5 miles</div>
-                    <div class="day-entry"><strong>Tue:</strong> 4.73 mile cycle + 2 miles</div>
-                    <div class="day-entry"><strong>Wed:</strong>  45 min cross-fit (2.38 mile) + 1.18 mile (3.56 mile)</div>
-                    <div class="day-entry"><strong>Thurs:</strong> 4.13 mile run + abs</div>
-                    <div class="day-entry"><strong>Fri:</strong> 60 min cross-fit (3.12 mile)</div>
-                    <div class="day-entry"><strong>Sat:</strong> Yoga</div>
-                    <div class="day-entry"><strong>Sun:</strong> REST</div>
-                </div>
-            
-                <div class="week-box">
+        <div class="week-box">
+          <h2>Week 1</h2>
+          <div class="day-entry"><strong>Mon:</strong> 2 mile run, 1 mile of sprints, and 20 min strength</div>
+          <div class="day-entry"><strong>Tue:</strong> 4.6 mile run + abs</div>
+          <div class="day-entry"><strong>Wed:</strong> 45 min cross-training (2 miles)</div>
+          <div class="day-entry"><strong>Thurs:</strong> 3.1 miles run + abs</div>
+          <div class="day-entry"><strong>Fri:</strong> 3.05 mile run + strength</div>
+          <div class="day-entry"><strong>Sat:</strong> 1 hour cross-training (3.2 miles)</div>
+          <div class="day-entry"><strong>Sun:</strong> REST</div>
+        </div>
+
+        <div class="week-box">
+          <h2>Week 2</h2>
+          <div class="day-entry"><strong>Mon:</strong> 3.2 mile run + 20 min strength</div>
+          <div class="day-entry"><strong>Tue:</strong> 4.5 mile run + abs</div>
+          <div class="day-entry"><strong>Wed:</strong> 45 min cross-training (2.24 miles)</div>
+          <div class="day-entry"><strong>Thurs:</strong> 3.1 run + 30 min total body strength</div>
+          <div class="day-entry"><strong>Fri:</strong> Pilates and yoga (ACTIVE REST)</div>
+          <div class="day-entry"><strong>Sat:</strong> 60 min cross-training (3.5 miles)</div>
+          <div class="day-entry"><strong>Sun:</strong> 4.1 mile run + 20 min lower body strength</div>
+        </div>
+
+        <div class="week-box">
+          <h2>Week 3</h2>
+          <div class="day-entry"><strong>Mon:</strong> 4.35 mile run + 20 min strength arms</div>
+          <div class="day-entry"><strong>Tue:</strong> 6.64 mile run + abs</div>
+          <div class="day-entry"><strong>Wed:</strong> 45 min cross-fit (2.05 miles) + 1 mile (3.1)</div>
+          <div class="day-entry"><strong>Thurs:</strong> 3.2 mile run + upper body (3.2)</div>
+          <div class="day-entry"><strong>Fri:</strong> 60 min cross-fit (3.5 mile)</div>
+          <div class="day-entry"><strong>Sat:</strong> Yoga</div>
+          <div class="day-entry"><strong>Sun:</strong> 8.5 mile cycle</div>
+        </div>
+
+        <div class="week-box">
+          <h2>Week 4</h2>
+          <div class="day-entry"><strong>Mon:</strong> 13 mile cycle + 1 mile (1) + abs</div>
+          <div class="day-entry"><strong>Tue:</strong> Bike cross-fit (8.71 mile bike) + 1 mile</div>
+          <div class="day-entry"><strong>Wed:</strong> 45 min cross-fit (2.23 mile) + 1 mile (3.23)</div>
+          <div class="day-entry"><strong>Thurs:</strong> 2 miles + 5.8 mile cycle + Abs</div>
+          <div class="day-entry"><strong>Fri:</strong> Yoga (ACTIVE REST)</div>
+          <div class="day-entry"><strong>Sat:</strong> 60 min cross-fit (3.5)</div>
+          <div class="day-entry"><strong>Sun:</strong> 5 mile run</div>
+          <div class="day-entry"><strong>Week 4 total:</strong> (15.73 run) (27.51 bike)</div>
+        </div>
+
+        <div class="week-box">
+          <h2>Week 5</h2>
+          <div class="day-entry"><strong>Mon:</strong> 13.35 mile cycle + 1.5 miles</div>
+          <div class="day-entry"><strong>Tue:</strong> 4.73 mile cycle + 2 miles</div>
+          <div class="day-entry"><strong>Wed:</strong> 45 min cross-fit (2.38 mile) + 1.18 mile (3.56 mile)</div>
+          <div class="day-entry"><strong>Thurs:</strong> 4.13 mile run + abs</div>
+          <div class="day-entry"><strong>Fri:</strong> 60 min cross-fit (3.12 mile)</div>
+          <div class="day-entry"><strong>Sat:</strong> Yoga</div>
+          <div class="day-entry"><strong>Sun:</strong> REST</div>
+        </div>
+
+        <div class="week-box">
+          <h2>Week 6</h2>
+          <div class="day-entry"><strong>Mon:</strong> 3.55 mile run + abs</div>
+          <div class="day-entry"><strong>Tue:</strong> 6.65 mile run</div>
+          <div class="day-entry"><strong>Wed:</strong> 5.44 mile run + lower body</div>
+          <div class="day-entry"><strong>Thurs:</strong> 45 min cross-fit (2.28 mile)</div>
+          <div class="day-entry"><strong>Fri:</strong> 60 min cross-fit (3.3 mile run)</div>
+          <div class="day-entry"><strong>Sat:</strong> 2 mile run + strength</div>
+          <div class="day-entry"><strong>Sun:</strong> 12.6 mile cycle</div>
+        </div>
+
+        <div class="week-box">
                     <h2>Week 6</h2>
                     <div class="day-entry"><strong>Mon:</strong> 3.55 mile run + abs</div>
                     <div class="day-entry"><strong>Tue:</strong> 6.65 mile run</div>
@@ -1201,13 +1232,61 @@ function filterWeeks() {
                 <!-- Continue adding week boxes in the same format -->
                 
             </body>
-            
-
-            <!-- Add more sections as needed -->
+        <!-- ===== PASTE THE REST OF YOUR WEEK BOXES BELOW THIS LINE ===== -->
+        <!-- Example:
+        <div class="week-box">
+          <h2>Week 7</h2>
+          <div class="day-entry"><strong>Mon:</strong> …</div>
+          …
         </div>
+        -->
+        <!-- (All the way through Week 102, etc.) -->
 
-    
-    </div>
-    <script src="js/sidebar.js"></script>
+      </div>
+    </section>
+  </main>
 
+  <footer class="bg-gray-100 p-4 text-center mt-10">
+    <p class="text-gray-600">Copyright &copy; 2025 Judy Effendi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Sidebar open/close compatibility with your existing script
+    function openNav() {
+      const s = document.getElementById("sidebar");
+      if (!s) return;
+      if (s.style.width && s.style.width !== "0px") {
+        s.style.width = "0";
+      } else {
+        s.style.width = "250px";
+      }
+    }
+
+    // Search helpers
+    function filterWeeks() {
+      const filter = (document.getElementById('searchInput').value || '').toLowerCase();
+      const boxes = document.querySelectorAll('.week-box');
+      boxes.forEach(box => {
+        const text = box.textContent.toLowerCase();
+        box.style.display = text.includes(filter) ? '' : 'none';
+      });
+    }
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      filterWeeks();
+      input.focus();
+    }
+    function quickFilter(term) {
+      const input = document.getElementById('searchInput');
+      input.value = term;
+      filterWeeks();
+    }
+  </script>
+
+  <script src="js/sidebar.js"></script>
+</body>
+</html>
+
+            
 
