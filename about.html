@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg" />
     <title>Judy Effendi</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+    <!-- Tailwind v2 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
 </head>
-<body class="bg-pink-50">
 
-    <nav class="blue-900 p-4">
+<body class="bg-gray-50 text-gray-800">
+    <!-- NAV -->
+    <nav class="bg-blue-900 p-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap">
             <div class="flex items-center">
                 <span class="openbtn text-white text-2xl" onclick="openNav()">&#9776;</span>
                 <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.PNG" alt="GitHub Logo" class="logo h-8 w-8">
+                    <img src="images/icons/judz22.PNG" alt="Logo" class="logo h-8 w-8" />
                 </a>
             </div>
             <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white neon-text">HOME</a>
-                <a href="about.html" class="text-white neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5">
+                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
+                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
+                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
+                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
+                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn" class="h-5" />
                 </a>
-                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5">
+                <a href="https://github.com/judzthecoder" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
+                    <img src="images/icons/github.png" alt="GitHub" class="h-5" />
                 </a>
             </div>
         </div>
     </nav>
 
+    <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo">
+        <img src="images/icons/judz22.PNG" alt="Logo" class="sidebar-logo" />
         <a href="index.html">🏠 Home</a>
         <a href="about.html">ℹ️ About</a>
         <a href="projects.html">📽 Projects</a>
@@ -47,92 +50,93 @@
         <a href="travel.html">🗺 Travel</a>
     </div>
 
+    <!-- MAIN -->
     <div id="main" class="max-w-7xl mx-auto mt-8 p-4">
         <div id="about" class="mb-8 text-center">
-            <h1 class="text-3xl font-bold mb-4 text-pink-300">About Me - Judy Effendi</h1>
+            <h1 class="text-3xl font-bold mb-4 text-blue-800">About Me - Judy Effendi</h1>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <img src="images/me/gradpic2.jpeg" alt="Welcome Image" class="image w-full h-auto">
-                <img src="images/me/gradpic3.jpeg" alt="Welcome Image" class="image w-full h-auto">
-                <img src="images/me/gradpic8.jpeg" alt="Welcome Image" class="image w-full h-auto">
-                <img src="images/me/gradpic9.jpeg" alt="Welcome Image" class="image w-full h-auto">
-                <img src="images/me/grapic10.jpeg" alt="Welcome Image" class="image w-full h-auto">
+                <img src="images/me/gradpic2.jpeg" alt="Welcome Image" class="image w-full h-auto rounded-md shadow" />
+                <img src="images/me/gradpic3.jpeg" alt="Welcome Image" class="image w-full h-auto rounded-md shadow" />
+                <img src="images/me/gradpic8.jpeg" alt="Welcome Image" class="image w-full h-auto rounded-md shadow" />
+                <img src="images/me/gradpic9.jpeg" alt="Welcome Image" class="image w-full h-auto rounded-md shadow" />
+                <img src="images/me/grapic10.jpeg" alt="Welcome Image" class="image w-full h-auto rounded-md shadow" />
             </div>
 
             <section class="mb-8 p-4">
-                <h2 class="text-2xl font-bold mb-2 text-pink-300">👩🏻‍🎓📚🎓</h2>
+                <h2 class="text-2xl font-bold mb-2 text-teal-600">👩🏻‍🎓📚🎓</h2>
                 <p class="text-gray-700"><b>Michigan State University</b> <i>2019-2023</i></p>
                 <p class="text-gray-700">Bachelors of Engineering in <b>Computer Science</b>, Minor in <b>Spanish</b></p>
-                <br>
-                <a href="https://oxford.credential.getsmarter.com/5819326c-eda5-476f-8f09-21c21f8705b8#gs.9mrikm" class="text-bold text-pink-300"><b>Oxford AI Certificate (click me!)</b></a>
+                <br />
+                <a href="https://oxford.credential.getsmarter.com/5819326c-eda5-476f-8f09-21c21f8705b8#gs.9mrikm" class="font-semibold text-teal-600 hover:text-teal-700">
+                    Oxford AI Certificate (click me!)
+                </a>
             </section>
 
             <section class="mb-8">
-                <h1 class="text-3xl font-bold mb-4 text-pink-300 p-4">💡⭐️</h1>
+                <h1 class="text-3xl font-bold mb-4 text-blue-800 p-4">💡⭐️</h1>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-white p-4 rounded-md shadow-md">
-                        <h2 class="text-xl font-bold mb-2 text-pink-300">Technical Skills 👩🏻‍💻</h2>
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100">
+                        <h2 class="text-xl font-bold mb-2 text-teal-600">Technical Skills 👩🏻‍💻</h2>
                         <p class="text-gray-700">Python, JavaScript, HTML, C++, SQL, Spark/Scala, Kotlin, Sveltekit, Tailwind, PostgreSQL, REST API, Android Studio, ML</p>
                     </div>
 
-                    <div class="bg-white p-4 rounded-md shadow-md">
-                        <h2 class="text-xl font-bold mb-2 text-pink-300">DevOps 👾</h2>
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100">
+                        <h2 class="text-xl font-bold mb-2 text-teal-600">DevOps 👾</h2>
                         <p class="text-gray-700">Git, Jira, Docker, Google Cloud Platform, Grafana, JUnit, Vela, Azure</p>
                     </div>
 
-                    <div class="bg-white p-4 rounded-md shadow-md">
-                        <h2 class="text-xl font-bold mb-2 text-pink-300">Non-Technical Skills 🎧</h2>
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100">
+                        <h2 class="text-xl font-bold mb-2 text-teal-600">Non-Technical Skills 🎧</h2>
                         <p class="text-gray-700">Leadership, Communication, Organization, Teamwork</p>
                     </div>
 
-                    <div class="bg-white p-4 rounded-md shadow-md">
-                        <h2 class="text-xl font-bold mb-2 text-pink-300">Languages 🇺🇸🇸🇾🇪🇸🇫🇷</h2>
-                        <p class="text-gray-700">Fluency in Arabic, English, Proficiency, Spanish, French</p>
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100">
+                        <h2 class="text-xl font-bold mb-2 text-teal-600">Languages 🇺🇸🇸🇾🇪🇸🇫🇷</h2>
+                        <p class="text-gray-700">Arabic, English (fluent); Spanish, French (proficient)</p>
                     </div>
 
-                    <div class="bg-white p-4 rounded-md shadow-md">
-                        <h2 class="text-xl font-bold mb-2 text-pink-300">Interests/Hobbies🗞</h2>
-                        <p class="text-gray-700">Bio-Tech, Medicine, ML, Piano, Running, Yoga, Cycling, Reading, Travel, Photography, Reading, and Cooking</p>
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100">
+                        <h2 class="text-xl font-bold mb-2 text-teal-600">Interests/Hobbies 🗞</h2>
+                        <p class="text-gray-700">Bio-Tech, Medicine, ML, Piano, Running, Yoga, Cycling, Reading, Travel, Photography, Cooking</p>
                     </div>
                 </div>
             </section>
 
             <section class="mb-8">
-                <h1 class="text-3xl font-bold mb-4 text-pink-300 p-4">🤸‍♀️📖🎶✈️🧑🏻‍🍳📸📝👠</h1>
+                <h1 class="text-3xl font-bold mb-4 text-blue-800 p-4">🤸‍♀️📖🎶✈️🧑🏻‍🍳📸📝👠</h1>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-4 rounded-md shadow-md">
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100 hover:shadow-lg transition">
                         <a href="training.html">
-                            <img src="images/hobbies/fitness.png" alt="Fitness" class="h-24 w-24 mx-auto">
+                            <img src="images/hobbies/fitness.png" alt="Fitness" class="h-24 w-24 mx-auto" />
                         </a>
                     </div>
-                    <div class="bg-white p-4 rounded-md shadow-md">
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100 hover:shadow-lg transition">
                         <a href="blog.html">
-                            <img src="images/hobbies/blog.png" alt="Blog" class="h-24 w-24 mx-auto">
+                            <img src="images/hobbies/blog.png" alt="Blog" class="h-24 w-24 mx-auto" />
                         </a>
                     </div>
-                    <div class="bg-white p-4 rounded-md shadow-md">
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100 hover:shadow-lg transition">
                         <a href="https://open.spotify.com/user/judy_effendi2?si=noeYKNe4QiaOQt3OiCtLEA&nd=1&dlsi=e3e2125b46b64a40" target="_blank" rel="noopener noreferrer">
-                            <img src="images/hobbies/music.png" alt="Music" class="h-24 w-24 mx-auto">
+                            <img src="images/hobbies/music.png" alt="Music" class="h-24 w-24 mx-auto" />
                         </a>
                     </div>
-                    <div class="bg-white p-4 rounded-md shadow-md">
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100 hover:shadow-lg transition">
                         <a href="photography.html">
-                            <img src="images/hobbies/photography.png" alt="Photography" class="h-24 w-24 mx-auto">
+                            <img src="images/hobbies/photography.png" alt="Photography" class="h-24 w-24 mx-auto" />
                         </a>
                     </div>
-                    <div class="bg-white p-4 rounded-md shadow-md">
+                    <div class="bg-white p-4 rounded-md shadow-md border border-gray-100 hover:shadow-lg transition">
                         <a href="travel.html">
-                            <img src="images/hobbies/travel.png" alt="Travel" class="h-24 w-24 mx-auto">
+                            <img src="images/hobbies/travel.png" alt="Travel" class="h-24 w-24 mx-auto" />
                         </a>
                     </div>
                 </div>
             </section>
-
-            <!-- Add more sections as needed -->
         </div>
     </div>
 
     <script src="js/sidebar.js"></script>
-
     <script src="js/script.js"></script>
 </body>
 </html>
