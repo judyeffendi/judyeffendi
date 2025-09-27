@@ -6,14 +6,12 @@
   <meta name="theme-color" content="#0b3c78" />
   <meta name="description" content="Judy Effendi — engineer, researcher, athlete. Explore projects, experience, writing, photography, and training logs." />
   <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg" />
-  <script src="js/sidebar.js"></script>
-  <script src="js/script.js"></script>
   <title>Judy Effendi</title>
 
-  <!-- TailwindCSS -->
+  <!-- Tailwind v2 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- Fonts (system stack for speed) -->
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <style>
     :root{
@@ -25,7 +23,7 @@
     html{scroll-behavior:smooth}
 
     /* ===== Fancy details ===== */
-    .backdrop-blur{backdrop-filter: blur(10px);}
+    .backdrop-blur{backdrop-filter: blur(10px);} 
     .rounded-20{border-radius:20px}
     .ring-gradient{box-shadow:0 0 0 4px rgba(20,184,166,.15)}
     .neon-text{ text-shadow: 0 0 12px rgba(20,184,166,.35), 0 0 24px rgba(20,184,166,.2); }
@@ -41,6 +39,11 @@
     /* Glass card */
     .glass{ background:var(--glass); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border:1px solid rgba(15,23,42,.06) }
 
+    /* Nav: shared component styling
+    .brand-nav{ background-color:#1e3a8a; } /* Tailwind blue-900 */
+    /* .brand-nav a.nav-link{ @apply text-white; }
+    .brand-nav a.nav-link:hover{ color:#99f6e4; } teal-100 */ 
+
     /* Accessibility helpers */
     @media (prefers-reduced-motion: reduce){
       *{ animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
@@ -48,50 +51,47 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
-
   <!-- Decorative blobs -->
   <div class="blob w-72 h-72 bg-teal-300 rounded-full top-[-40px] left-[-40px]"></div>
   <div class="blob w-96 h-96 bg-blue-300 rounded-full top-[30%] right-[-80px]"></div>
 
-    <!-- NAV -->
-    <body class="bg-gray-50 text-gray-800">
-    <!-- NAV -->
-    <nav class="bg-blue-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.png" alt="Logo" class="h-8 w-8 rounded-full border border-white border-opacity-30" />
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5" />
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5" />
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo" />
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
+  <!-- NAV (unified across pages) -->
+  <nav class="brand-nav p-4">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+      <div class="flex items-center">
+        <button class="openbtn text-white" aria-label="Open sidebar" onclick="openNav()">&#9776;</button>
+        <a href="index.html" class="text-white ml-4">
+          <img src="images/icons/judz22.png" alt="Logo" class="h-8 w-8 rounded-full border border-white border-opacity-30" />
+        </a>
+      </div>
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
+        <a href="index.html" class="nav-link text-white hover:text-teal-200 neon-text">HOME</a>
+        <a href="about.html" class="nav-link text-white hover:text-teal-200 neon-text">ABOUT</a>
+        <a href="projects.html" class="nav-link text-white hover:text-teal-200 neon-text">PROJECTS</a>
+        <a href="experience.html" class="nav-link text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
+        <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80" aria-label="LinkedIn">
+          <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5" />
+        </a>
+        <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80" aria-label="GitHub">
+          <img src="images/icons/github.png" alt="GitHub Logo" class="h-5" />
+        </a>
+      </div>
     </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">&times;</a>
+    <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo" />
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="projects.html">📽 Projects</a>
+    <a href="experience.html">🔰 Experience</a>
+    <a href="training.html">🏃🏻‍♀ Training</a>
+    <a href="photography.html">📸 Photography</a>
+    <a href="blog.html">💻 Blog</a>
+    <a href="travel.html">🗺 Travel</a>
+  </div>
 
   <!-- HERO -->
   <header class="relative overflow-hidden">
@@ -110,19 +110,16 @@
             Hi, I’m <span class="text-teal-600 neon-text">Judy Effendi</span>.
           </h1>
           <p class="mt-5 text-lg text-gray-700 max-w-xl">I build human‑centered software, explore AI in medicine, and train like an athlete. Explore my work, read my story, and say hi.</p>
-
           <!-- Typing line -->
           <div class="mt-6">
             <p id="typing-text" class="text-base md:text-lg font-medium text-gray-800"></p>
           </div>
-
           <!-- CTAs -->
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="about.html" class="neon-button bg-white text-blue-900 px-6 py-3 rounded-20 border border-blue-100 font-semibold">About me</a>
             <a href="contact.html" class="neon-button bg-blue-900 text-white px-6 py-3 rounded-20 border border-blue-900 font-semibold">Contact</a>
             <a href="images/resume/JUDYEFFENDI2025RESUME.docx.pdf" download class="neon-button bg-white text-blue-900 px-6 py-3 rounded-20 border border-blue-100 font-semibold">Download Résumé</a>
           </div>
-
           <!-- Quick links -->
           <div class="mt-6 grid grid-cols-2 sm:flex sm:flex-wrap gap-3 text-sm">
             <a class="link-underline text-blue-900" href="projects.html">Featured projects →</a>
@@ -163,6 +160,7 @@
       </div>
     </div>
   </section>
+
   <!-- FOOTER -->
   <footer class="bg-gray-100 border-t border-gray-200">
     <div class="container mx-auto px-4 py-8">
@@ -172,3 +170,41 @@
           <a class="link-underline text-gray-700" href="mailto:judyeffendi2@gmail.com">Email</a>
           <a class="link-underline text-gray-700" href="https://github.com/judyeffendi" target="_blank" rel="noopener">GitHub</a>
           <a class="link-underline text-gray-700" href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Simple typing line (optional)
+    const phrases = [
+      'AI in pathology • clinical impact',
+      'Marathon to Medicine — disciplined & curious',
+      'I build, I learn, I ship'
+    ];
+    let i = 0; let el = null;
+    function typeNext(){
+      if(!el) el = document.getElementById('typing-text');
+      const text = phrases[i % phrases.length];
+      let j = 0; el.textContent = '';
+      const id = setInterval(()=>{
+        el.textContent = text.slice(0, j++);
+        if(j > text.length){ clearInterval(id); setTimeout(()=>{ i++; typeNext(); }, 1600); }
+      }, 36);
+    }
+    window.addEventListener('DOMContentLoaded', typeNext);
+
+    // Active nav link (based on path)
+    (function(){
+      const path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('nav a.nav-link').forEach(a=>{
+        const href = a.getAttribute('href');
+        if(href === path){ a.classList.add('font-semibold'); a.classList.add('underline'); }
+      });
+    })();
+  </script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
