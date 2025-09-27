@@ -24,7 +24,7 @@
         "Developed and launched the NAAMA NextGen website using HTML, CSS, and JavaScript.",
         "Organized and moderated national panels on AI in Medicine with leaders in pathology and biomedical informatics.",
         "Led the design of research symposium rubrics, abstracts guidelines, and poster/oral presentation standards.",
-        "Co-chaired the 6th National Summit, managing logistics, budgets, and speaker coordination for 300+ attendees."
+        "Co-led the 6th National Summit, managing logistics, and speaker coordination for 300+ attendees."
       ]
     },
     {
