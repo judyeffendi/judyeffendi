@@ -6,7 +6,7 @@
     {
       company: "University of Michigan Medicine",
       location: "Ann Arbor, MI",
-      position: "Research Assistant, Department of Pathology",
+      position: "Research Project Coordinator, Department of Pathology",
       date: "July 2025–Present",
       responsibilities: [
         "Filtered and analyzed breast pathology data under the mentorship of Dr. Rouba Ali-Fehmi.",
