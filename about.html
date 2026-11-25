@@ -1,179 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="images/icons/judz22.jpg" />
-  <title>Judy Effendi</title>
-  <!-- Tailwind v2 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/sidebar.css" />
-
-  <style>
-    :root { --brand:#0b3b8a; --teal:#14b8a6; }
-    html { scroll-behavior:smooth; }
-    body, html { height: 100%; overflow-y: auto; }
-
-    /* Aurora background */
-    .bg-aurora {
-      background: radial-gradient(1200px 600px at 10% 0%, rgba(37,99,235,.10), transparent 60%),
-                  radial-gradient(900px 500px at 90% 0%, rgba(20,184,166,.10), transparent 60%),
-                  linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      position: relative;
-    }
-
-    .blob { position:absolute; filter: blur(40px); opacity:.5; mix-blend-mode:multiply; animation: float 18s ease-in-out infinite; }
-    .blob.b1 { width:420px; height:420px; background:#60a5fa; left:-80px; top:-80px; }
-    .blob.b2 { width:380px; height:380px; background:#34d399; right:-120px; top:140px; animation-delay:2.5s; }
-    .blob.b3 { width:520px; height:520px; background:#a78bfa; left:40%; bottom:-160px; animation-delay:5s; }
-    @keyframes float { 0%,100%{ transform:translateY(0) translateX(0) scale(1);} 50%{ transform:translateY(-35px) translateX(8px) scale(1.04);} }
-
-    .glass { background: rgba(255,255,255,.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-    .tilt { transform-style: preserve-3d; transition: transform .18s ease, box-shadow .18s ease; }
-    .tilt:hover { transform: translateY(-4px) rotateX(2deg) rotateY(-2deg); box-shadow: 0 12px 34px rgba(2,6,23,.12); }
-    .reveal { opacity:0; transform: translateY(14px); transition: all .7s ease; }
-    .reveal.visible { opacity:1; transform: translateY(0); }
-
-    .ph { height: 10rem; }
-    @media (min-width:768px){ .ph{ height: 12rem; } }
-    @media (min-width:1024px){ .ph{ height: 10rem; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Judy Effendi</title>
+<meta name="description" content="About Judy Effendi: software engineer turned clinical researcher, runner, boxer, photographer and first-generation student.">
+<meta property="og:title" content="About | Judy Effendi">
+<meta property="og:description" content="About Judy Effendi: software engineer turned clinical researcher, runner, boxer, photographer and first-generation student.">
+<meta property="og:image" content="images/web/judy-portrait.jpg">
+<meta name="theme-color" content="#FBFAF7">
+<link rel="icon" type="image/png" href="images/icons/judz22.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/core.css">
+<script defer src="js/site.js"></script>
 </head>
-
-
-<body class="bg-gray-50 text-gray-800">
-    <!-- NAV -->
-    <nav class="bg-blue-900 p-4">
-        <div class="container mx-auto flex items-center justify-between flex-wrap">
-            <div class="flex items-center">
-                <span class="openbtn text-white" onclick="openNav()">&#9776;</span>
-                <a href="index.html" class="text-white ml-4">
-                    <img src="images/icons/judz22.png" alt="Logo" class="h-8 w-8 rounded-full border border-white border-opacity-30" />
-                </a>
-            </div>
-            <div class="flex items-center space-x-4 mt-4 lg:mt-0 flex-wrap">
-                <a href="index.html" class="text-white hover:text-teal-200 neon-text">HOME</a>
-                <a href="about.html" class="text-white hover:text-teal-200 neon-text">ABOUT</a>
-                <a href="projects.html" class="text-white hover:text-teal-200 neon-text">PROJECTS</a>
-                <a href="experience.html" class="text-white hover:text-teal-200 neon-text">EXPERIENCE</a>
-                <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/icons8-linkedin-50.png" alt="LinkedIn Logo" class="h-5" />
-                </a>
-                <a href="https://github.com/judyeffendi" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80">
-                    <img src="images/icons/github.png" alt="GitHub Logo" class="h-5" />
-                </a>
-            </div>
-        </div>
+<body>
+<header class="je-header">
+  <div class="je-wrap">
+    <a class="je-brand" href="index.html">Judy Effendi</a>
+    <button class="je-menu-btn" type="button" aria-expanded="false" aria-controls="je-nav">Menu</button>
+    <nav class="je-nav" id="je-nav" aria-label="Main">
+    <a href="about.html" aria-current="page">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html#beyond">Beyond work</a>
+    <a href="contact.html">Contact</a>
+    <a class="je-cta" href="images/resume/Judy-Effendi-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
     </nav>
-
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="images/icons/judz22.png" alt="Logo" class="sidebar-logo" />
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">ℹ️ About</a>
-        <a href="projects.html">📽 Projects</a>
-        <a href="experience.html">🔰 Experience</a>
-        <a href="training.html">🏃🏻‍♀ Training</a>
-        <a href="photography.html">📸 Photography</a>
-        <a href="blog.html">💻 Blog</a>
-        <a href="travel.html">🗺 Travel</a>
-    </div>
-
-  <!-- MAIN -->
-  <div id="main" class="max-w-7xl mx-auto mt-8 p-4">
-    <header class="mb-8 text-center reveal">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-blue-800">About Me — Judy Effendi</h1>
-      <p class="text-gray-700 max-w-2xl mx-auto">Software engineer ➜ aspiring physician. Passionate about AI for medicine, clean data, and long runs that feel like meditation.</p>
-      <div class="mt-4 flex flex-wrap justify-center gap-2 text-xs">
-        <span class="px-3 py-1 rounded-full bg-white/70 border border-gray-200">Michigan Medicine Pathology</span>
-        <span class="px-3 py-1 rounded-full bg-white/70 border border-gray-200">AI & Web Dev</span>
-        <span class="px-3 py-1 rounded-full bg-white/70 border border-gray-200">Marathon runner</span>
-      </div>
-    </header>
-
-    <section class="mb-8 reveal">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-        <img src="images/me/gradpic2.jpeg" alt="Welcome" class="w-full rounded-xl shadow ph object-cover tilt">
-        <img src="images/me/gradpic3.jpeg" alt="Welcome" class="w-full rounded-xl shadow ph object-cover tilt">
-        <img src="images/me/gradpic8.jpeg" alt="Welcome" class="w-full rounded-xl shadow ph object-cover tilt">
-        <img src="images/me/gradpic9.jpeg" alt="Welcome" class="w-full rounded-xl shadow ph object-cover tilt">
-        <img src="images/me/grapic10.jpeg" alt="Welcome" class="w-full rounded-xl shadow ph object-cover tilt">
-      </div>
-    </section>
-
-    <section class="mb-8 p-6 glass rounded-2xl border border-white border-opacity-40 reveal">
-      <h2 class="text-2xl font-bold mb-2 text-teal-600">👩🏻‍🎓📚🎓</h2>
-      <p class="text-gray-800"><b>Michigan State University</b> <i>2019-2023</i></p>
-      <p class="text-gray-700">Bachelors of Engineering in <b>Computer Science</b>, Minor in <b>Spanish</b></p>
-      <a href="https://oxford.credential.getsmarter.com/5819326c-eda5-476f-8f09-21c21f8705b8#gs.9mrikm" class="inline-block mt-3 font-semibold text-teal-600 hover:text-teal-700">Oxford AI Certificate (click me!) →</a>
-    </section>
-
-    <section class="mb-8 reveal">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white p-5 rounded-2xl shadow-md border border-gray-100 tilt">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">Technical Skills 👩🏻‍💻</h3>
-          <p class="text-gray-700 text-sm">Python, JavaScript, HTML, C++, SQL, Spark/Scala, Kotlin, Sveltekit, Tailwind, PostgreSQL, REST API, Android Studio, ML</p>
-        </div>
-        <div class="bg-white p-5 rounded-2xl shadow-md border border-gray-100 tilt">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">DevOps 👾</h3>
-          <p class="text-gray-700 text-sm">Git, Jira, Docker, Google Cloud Platform, Grafana, JUnit, Vela, Azure</p>
-        </div>
-        <div class="bg-white p-5 rounded-2xl shadow-md border border-gray-100 tilt">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">Non‑Technical Skills 🎧</h3>
-          <p class="text-gray-700 text-sm">Leadership, Communication, Organization, Teamwork</p>
-        </div>
-        <div class="bg-white p-5 rounded-2xl shadow-md border border-gray-100 tilt">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">Languages 🇺🇸🇸🇾🇪🇸🇫🇷</h3>
-          <p class="text-gray-700 text-sm">Arabic, English (fluent); Spanish, French (proficient)</p>
-        </div>
-        <div class="bg-white p-5 rounded-2xl shadow-md border border-gray-100 tilt md:col-span-2 lg:col-span-1">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">Interests/Hobbies 🗞</h3>
-          <p class="text-gray-700 text-sm">Bio‑Tech, Medicine, ML, Piano, Boxing, Pilates, Skiing, Hiking, Running, Yoga, Cycling, Reading, Travel, Photography, Cooking</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-2 reveal">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Explore</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <a href="training.html" class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 tilt">
-          <span class="text-5xl block mb-2">🏃🏻‍♀️</span>
-          <p class="font-semibold text-gray-700">Fitness</p>
-        </a>
-        <a href="blog.html" class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 tilt">
-          <span class="text-5xl block mb-2">📝</span>
-          <p class="font-semibold text-gray-700">Blog</p>
-        </a>
-        <a href="https://open.spotify.com/user/judy_effendi2" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 tilt">
-          <span class="text-5xl block mb-2">🎶</span>
-          <p class="font-semibold text-gray-700">Music</p>
-        </a>
-        <a href="photography.html" class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 tilt">
-          <span class="text-5xl block mb-2">📸</span>
-          <p class="font-semibold text-gray-700">Photography</p>
-        </a>
-        <a href="travel.html" class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1 tilt">
-          <span class="text-5xl block mb-2">🌍</span>
-          <p class="font-semibold text-gray-700">Travel</p>
-        </a>
-      </div>
-    </section>
-
   </div>
+</header>
+<main>
+<section class="page-head">
+  <div class="wrap narrow">
+    <p class="kicker">About</p>
+    <h1>Hi, I'm Judy.</h1>
+    <p class="lede">I started in software and found my way to medicine. Today I work where the two meet.</p>
+  </div>
+</section>
 
-  <script>
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target);} });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  </script>
-  <script src="js/sidebar.js"></script>
-  <script src="js/script.js"></script>
+<section class="rule">
+  <div class="wrap about-grid">
+    <img class="about-photo" src="images/web/judy-about.jpg" alt="Portrait of Judy Effendi" width="800" height="1200">
+    <div>
+      <div class="prose">
+        <p>I studied computer science at Michigan State and spent nearly two years as a software engineer at Target, building backend services and data pipelines with Kotlin, Kafka and PostgreSQL. I loved the craft, but I kept being drawn to problems in health.</p>
+        <p>So I made the jump. At Michigan Medicine I now support research in digital pathology, AI and cancer diagnostics: cleaning and analyzing clinical datasets in Python, co-authoring papers, writing grants, and coordinating a global pathology consortium with investigators in more than 25 countries. I also work as a medical assistant, which keeps me close to patients.</p>
+        <p>I'm most interested in how careful engineering and good data can make medicine better, and I'm continuing to build toward a career at that intersection.</p>
+        <p>Outside of work I train for marathons, box, practice yoga, shoot film and digital photography, and travel whenever I can.</p>
+      </div>
 
-  <footer class="bg-gray-100 p-4 text-center mt-10">
-    <p class="text-gray-600">Copyright &copy; 2025 Judy Effendi. All rights reserved.</p>
-  </footer>
+      <div class="facts">
+        <div><h3>Education</h3><p>B.S. Computer Science and Engineering, Michigan State University (2019–2023), minor in Spanish. Post-baccalaureate biology coursework, University of Michigan. <a href="https://oxford.credential.getsmarter.com/5819326c-eda5-476f-8f09-21c21f8705b8#gs.9mrikm" target="_blank" rel="noopener">Oxford AI certificate</a>.</p></div>
+        <div><h3>Technical</h3><p>Python, SQL, pandas, scikit-learn, Jupyter, Kotlin, Scala/Spark, Java, C++, JavaScript, PostgreSQL, Kafka, Docker, Git, AWS and Google Cloud.</p></div>
+        <div><h3>Research</h3><p>Digital pathology, cancer diagnostics, clinical research data management, CITI/IRB human-subjects training, scientific writing, grant development.</p></div>
+        <div><h3>Languages</h3><p>Arabic and English (fluent); Spanish and French (proficient).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rule" id="beyond">
+  <div class="wrap">
+    <p class="kicker">Beyond work</p>
+    <h2>The rest of the picture</h2>
+    <div class="beyond">
+      <a href="training.html"><strong>Training</strong><span>Marathon builds, boxing, yoga and training logs</span></a>
+      <a href="photography.html"><strong>Photography</strong><span>Film and digital work</span></a>
+      <a href="travel.html"><strong>Travel</strong><span>Notes and photos from the road</span></a>
+      <a href="blog.html"><strong>Writing</strong><span>Reflections, including being first-gen</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p>I'm interested in roles and research where software, data and medicine meet, especially in healthcare and biotech.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="mailto:judyeffendi2@gmail.com">Email me</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="je-footer">
+  <div class="je-wrap">
+    <span>© 2026 Judy Effendi</span>
+    <nav aria-label="Footer">
+      <a href="mailto:judyeffendi2@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/judy-effendi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/judyeffendi" target="_blank" rel="noopener">GitHub</a>
+      <a href="training.html">Training</a>
+      <a href="photography.html">Photography</a>
+      <a href="blog.html">Blog</a>
+      <a href="travel.html">Travel</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
