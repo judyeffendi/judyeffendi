@@ -7,7 +7,6 @@
 👯 I’m looking to collaborate on high-level projects in the ML Space
 🤔 I’m looking for help with improving my developer skills
 💬 Ask me about my favorite book
-I am currently in a post-bac with plans to apply to medical school in 2026.
  📫 How to reach me: 
     📧: judyeffendi2@gmail.com
 ⚡ Fun fact: I can speak 4 different languages!
