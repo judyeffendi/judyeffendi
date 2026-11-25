@@ -43,7 +43,7 @@
       company: "Target Corp.",
       location: "Minneapolis, MN",
       position: "Software Engineer",
-      date: "September 2023–Present",
+      date: "September 2023–May 2025",
       responsibilities: [
         "Developed a Kotlin-based module for Kafka to achieve seamless data mirroring from production to stage, ensuring adherence to Avro schema standards.",
         "Implemented robust redaction mechanisms to safeguard sensitive data from being propagated to output topics.",
